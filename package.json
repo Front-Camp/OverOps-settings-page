@@ -1,0 +1,51 @@
+{
+  "name": "react-redux-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack/webpack.dev.js"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "16.4.11",
+    "@types/react-dom": "16.0.7",
+    "@types/react-redux": "6.0.6",
+    "@types/react-router-dom": "4.3.0",
+    "@types/react-router-redux": "5.0.15",
+    "@types/webpack": "4.4.10",
+    "@types/webpack-dev-server": "2.9.6",
+    "@types/redux-logger": "^3.0.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-runtime": "^6.26.0",
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.0.1",
+    "tslint": "5.11.0",
+    "tslint-config-airbnb": "^5.10.0",
+    "tslint-loader": "^3.6.0",
+    "tslint-react": "3.6.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dosandk/react-redux.git"
+  },
+  "author": "Volodymyr Shevchuk <dosandkv@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dosandk/react-redux/issues"
+  },
+  "homepage": "https://github.com/dosandk/react-redux#readme"
+}
