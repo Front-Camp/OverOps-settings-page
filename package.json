@@ -2,7 +2,7 @@
   "name": "react-redux-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.tsx",
+  "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js"
   },

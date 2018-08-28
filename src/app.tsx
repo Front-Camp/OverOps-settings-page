@@ -18,6 +18,6 @@ const Index: React.SFC = () => (
 );
 
 const appContainer = document.getElementById('app');
-const renderApp = (app: JSX.Element) => render(app, appContainer);
+const renderApp = () => render(<Index />, appContainer);
 
-renderApp(<Index />);
+export default renderApp;
