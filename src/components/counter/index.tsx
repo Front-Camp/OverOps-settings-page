@@ -1,9 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {increment, decrement} from '../../actions/counter';
+import {increment, decrement, CounterAction} from '../../actions/counter';
 
-const Counter = ({counter, actions}: any) => {
+interface Props {
+  counter: number;
+  actions: {
+    increment: () => CounterAction;
+    decrement: () => CounterAction;
+  }
+}
+const Counter: React.SFC<Props> = ({counter, actions}) => {
   const {increment, decrement} = actions;
 
   return (

@@ -1,15 +1,15 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import {Router} from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
+import {createBrowserHistory} from 'history';
 
 import configureStore from './store/configureStore';
 import Routes from './routes';
 
 const store = configureStore({counter: 0});
 
-const Index = (): any => (
+const Index: React.SFC = () => (
   <Provider store={store}>
     <Router history={createBrowserHistory()}>
       <Routes />
@@ -18,6 +18,6 @@ const Index = (): any => (
 );
 
 const appContainer = document.getElementById('app');
-const renderApp = () => render(<Index />, appContainer);
+const renderApp = (app: JSX.Element) => render(app, appContainer);
 
-renderApp();
+renderApp(<Index />);

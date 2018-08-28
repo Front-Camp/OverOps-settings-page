@@ -12,13 +12,13 @@ module.exports = {
     path: path.resolve(__dirname, '../dist')
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.tsx']
+    extensions: ['.js', '.jsx', '.tsx', '.ts']
   },
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
-        test: /\.(js|jsx|tsx)?$/,
+        test: /\.(js|ts|jsx|tsx)?$/,
         use: [
           {
             loader: 'babel-loader',
