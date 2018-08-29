@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, Route} from 'react-router-dom';
 import Counter from '../counter';
+import itemsList from '../items-list';
 
 const Home = () => {
   return (
@@ -13,8 +14,12 @@ const Home = () => {
         <li>
           <Link to="/counter">Counter</Link>
         </li>
+        <li>
+          <Link to="/items-list">ItemsList</Link>
+        </li>
       </ul>
       <Route path={'/counter'} component={Counter} />
+      <Route path={'/items-list'} component={itemsList} />
     </div>
   );
 };

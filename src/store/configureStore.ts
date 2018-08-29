@@ -10,7 +10,8 @@ const composeEnhancers = (
 ) || compose;
 
 interface InitialStore {
-  counter: number
+  counter: number,
+  itemsList: Array<Object>
 }
 
 const configureStore = (initialState: InitialStore) => {

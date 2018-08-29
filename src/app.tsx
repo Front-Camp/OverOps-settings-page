@@ -7,7 +7,16 @@ import {createBrowserHistory} from 'history';
 import configureStore from './store/configureStore';
 import Routes from './routes';
 
-const store = configureStore({counter: 0});
+const initStore = {
+  counter: 0,
+  itemsList: [
+    {id: 1, value: 'some list item 1'},
+    {id: 2, value: 'some list item 2'},
+    {id: 3, value: 'some list item 3'}
+  ]
+};
+
+const store = configureStore(initStore);
 
 const Index: React.SFC = () => (
   <Provider store={store}>
