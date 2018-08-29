@@ -14,13 +14,13 @@ const Counter: React.SFC<Props> = ({counter, actions}) => {
   const {increment, decrement} = actions;
 
   return (
-    <div>
+    <div style={{fontSize: '24px', textAlign: 'center'}}>
       <div>
         {counter}
       </div>
       <div>
-        <button onClick={() => increment()}>+1</button>
-        <button onClick={() => decrement()}>-1</button>
+        <button className="btn" onClick={() => increment()}>+1</button>
+        <button className="btn" onClick={() => decrement()}>-1</button>
       </div>
     </div>
   );
