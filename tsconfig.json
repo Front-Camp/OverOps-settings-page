@@ -35,7 +35,9 @@
     "pretty": true,
     "removeComments": true,
     "sourceMap": true,
-    "types":[]
+    "types":[
+      "jest"
+    ]
   },
   "include": [
     "src/**/*"
