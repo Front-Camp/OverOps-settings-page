@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const cssLoaders = require('./loaders/css-loaders');
+const jsLoaders = require('./loaders/js-loaders');
 
 module.exports = {
   entry: [
@@ -17,31 +19,8 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
-      {
-        test: /\.(js|ts|jsx|tsx)?$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              babelrc: false,
-              // plugins: ['react-hot-loader/babel'],
-            }
-          },
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-              compilerOptions: {
-                'sourceMap': true,
-                'target': 'es5',
-                'isolatedModules': true,
-                'noEmitOnError': false
-              },
-            }
-          }
-        ],
-        exclude: [/(node_modules)/]
-      }
+      ...cssLoaders,
+      ...jsLoaders
     ]
   },
   plugins: [

@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {increment, decrement, CounterAction} from '../../actions/counter';
 
+import './counter.scss';
+
 interface Props {
   counter: number;
   actions: {
@@ -14,7 +16,7 @@ const Counter: React.SFC<Props> = ({counter, actions}) => {
   const {increment, decrement} = actions;
 
   return (
-    <div style={{fontSize: '24px', textAlign: 'center'}}>
+    <div className="counter">
       <div>
         {counter}
       </div>
