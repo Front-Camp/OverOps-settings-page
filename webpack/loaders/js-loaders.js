@@ -1,24 +1,20 @@
-module.exports = {
-  test: /\.(js|ts|jsx|tsx)?$/,
-  use: [
-    {
-      loader: 'babel-loader',
-      options: {
-        babelrc: false
-      }
-    },
-    {
-      loader: 'ts-loader',
-      options: {
-        transpileOnly: true,
-        compilerOptions: {
-          'sourceMap': true,
-          'target': 'es5',
-          'isolatedModules': true,
-          'noEmitOnError': false
-        },
-      }
+module.exports = [
+  {
+    loader: 'babel-loader',
+    options: {
+      babelrc: false
     }
-  ],
-  exclude: [/(node_modules)/]
-};
+  },
+  {
+    loader: 'ts-loader',
+    options: {
+      transpileOnly: true,
+      compilerOptions: {
+        'sourceMap': true,
+        'target': 'es5',
+        'isolatedModules': true,
+        'noEmitOnError': false
+      },
+    }
+  }
+];

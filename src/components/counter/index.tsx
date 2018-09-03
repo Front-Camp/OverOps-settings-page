@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {increment, decrement, CounterAction} from '../../actions/counter';
 
-import './counter.scss';
+import styles from './counter.scss';
 
 interface Props {
   counter: number;
@@ -16,13 +16,13 @@ const Counter: React.SFC<Props> = ({counter, actions}) => {
   const {increment, decrement} = actions;
 
   return (
-    <div className="counter">
+    <div className={styles.counter}>
       <div>
         {counter}
       </div>
       <div>
-        <button className="btn" onClick={() => increment()}>+1</button>
-        <button className="btn" onClick={() => decrement()}>-1</button>
+        <button className={styles.btn} onClick={() => increment()}>+1</button>
+        <button className={styles.btn} onClick={() => decrement()}>-1</button>
       </div>
     </div>
   );

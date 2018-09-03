@@ -19,8 +19,16 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
-      ...cssLoaders,
-      ...jsLoaders
+      {
+        test: /\.(js|ts|jsx|tsx)?$/,
+        use: jsLoaders,
+        exclude: [/(node_modules)/]
+      },
+      {
+        test: /\.scss$/,
+        use: cssLoaders,
+        exclude: [/(node_modules)/]
+      }
     ]
   },
   plugins: [
