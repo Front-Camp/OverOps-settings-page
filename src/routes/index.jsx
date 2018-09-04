@@ -5,14 +5,13 @@ import Home from '../components/home';
 export class Routes extends React.Component {
   static root = '/';
 
-  render() {
+  render () {
     return (
       <Switch>
         <Route
           path={Routes.root}
           render={() => <Home />} />
-        <Route
-          render={() => <Redirect to={Routes.root} />} />
+        <Route render={() => <Redirect to={Routes.root} />} />
       </Switch>
     );
   }

@@ -4,5 +4,11 @@ module.exports = [
     query: {
       cacheDirectory: true
     }
+  },
+  {
+    loader: 'eslint-loader',
+    options: {
+      // eslint options (if necessary)
+    }
   }
 ];

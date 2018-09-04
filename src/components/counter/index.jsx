@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import {increment, decrement} from '../../actions/counter';
 
 import styles from './counter.scss';
@@ -23,14 +23,14 @@ const Counter = ({counter, actions}) => {
 
 const mapStateToProps = state => {
   return {
-    counter: state.counter,
-  }
+    counter: state.counter
+  };
 };
 
 const mapActionsToProps = dispatch => {
   return {
     actions: bindActionCreators({increment, decrement}, dispatch)
-  }
+  };
 };
 
 // Without "bindActionCreators"
