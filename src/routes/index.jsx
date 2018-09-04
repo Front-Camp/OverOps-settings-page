@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import Home from '../components/home';
+import Environments from '../components/environments';
 
 export class Routes extends React.Component {
   static root = '/';
@@ -8,6 +9,7 @@ export class Routes extends React.Component {
   render () {
     return (
       <Switch>
+        <Route path="/environments" component={Environments} />
         <Route
           path={Routes.root}
           render={() => <Home />} />
