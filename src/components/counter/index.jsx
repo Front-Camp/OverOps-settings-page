@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {increment, decrement} from '../../actions/counter';
+import Button from '@material-ui/core/Button';
 
 import styles from './counter.scss';
 
@@ -14,8 +15,8 @@ const Counter = ({counter, actions}) => {
         {counter}
       </div>
       <div>
-        <button className={styles.btn} onClick={() => increment()}>+1</button>
-        <button className={styles.btn} onClick={() => decrement()}>-1</button>
+        <Button variant="contained" color="primary" onClick={() => increment()}>+1</Button>
+        <Button variant="contained" color="primary" className={styles.btn} onClick={() => decrement()}>-1</Button>
       </div>
     </div>
   );

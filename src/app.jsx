@@ -9,6 +9,7 @@ import Routes from './routes';
 
 const store = configureStore({counter: 0});
 
+// TODO: implement theme provider https://material-ui.com/customization/themes/
 const Index = () => (
   <Provider store={store}>
     <Router history={createBrowserHistory()}>
