@@ -2,20 +2,15 @@ module.exports = {
   "roots": [
     "<rootDir>/src"
   ],
-  "transform": {
-    "^.+\\.tsx?$": "ts-jest"
-  },
-  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
   "moduleFileExtensions": [
-    "ts",
-    "tsx",
     "js",
     "jsx",
     "json",
     "node"
   ],
   "snapshotSerializers": ["enzyme-to-json/serializer"],
-  "setupTestFrameworkScriptFile": "<rootDir>/src/test-config-files/setupEnzyme.ts",
+  "setupTestFrameworkScriptFile": "<rootDir>/src/test-config-files/setupEnzyme.js",
 
   "moduleNameMapper": {
     "\\.scss$": "identity-obj-proxy"

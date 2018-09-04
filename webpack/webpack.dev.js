@@ -5,7 +5,7 @@ const jsLoaders = require('./loaders/js-loaders');
 
 module.exports = {
   entry: [
-    path.join(__dirname, '../src/app.tsx'),
+    path.join(__dirname, '../src/app.jsx'),
   ],
   target: 'web',
   mode: 'development',
@@ -14,13 +14,13 @@ module.exports = {
     path: path.resolve(__dirname, '../dist')
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.tsx', '.ts']
+    extensions: ['.js', '.jsx']
   },
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
-        test: /\.(js|ts|jsx|tsx)?$/,
+        test: /\.(js|jsx)?$/,
         use: jsLoaders,
         exclude: [/(node_modules)/]
       },

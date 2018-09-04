@@ -9,7 +9,7 @@ import Routes from './routes';
 
 const store = configureStore({counter: 0});
 
-const Index: React.SFC = () => (
+const Index = () => (
   <Provider store={store}>
     <Router history={createBrowserHistory()}>
       <Routes />

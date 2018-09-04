@@ -1,4 +1,4 @@
-export const example = (store: any) => (next: any) => (action: any) => {
+export const example = store => next => action => {
   console.error('store', store);
   console.error('next', next);
   console.error('action', action);

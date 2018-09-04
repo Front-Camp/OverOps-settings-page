@@ -1,13 +1,13 @@
-export const createReducers = (reducerObj: any) => {
-  return Object.keys(reducerObj).reduce((accum: any, reducerName: any) => {
+export const createReducers = reducerObj => {
+  return Object.keys(reducerObj).reduce((accum, reducerName) => {
     accum[reducerName] = createReducer(reducerObj[reducerName]);
 
     return accum;
   }, {});
 };
 
-const createReducer = (handlers: any) => {
-  return (state = null, action: any) => {
+const createReducer = handlers => {
+  return (state = null, action) => {
     if (handlers[action.type]) {
       return handlers[action.type](state, action);
     }

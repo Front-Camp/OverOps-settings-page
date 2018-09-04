@@ -1,13 +1,8 @@
 import * as React from 'react';
 
-export class Index extends React.Component<{
-  labelOn: string,
-  labelOff: string
-}, {
-  isChecked: boolean
-}> {
-  constructor(props: any) {
-    super(props);
+export class Index extends React.Component {
+  constructor(...props) {
+    super(...props);
     this.state = { isChecked: false };
   }
 

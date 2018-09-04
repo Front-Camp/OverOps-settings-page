@@ -5,7 +5,7 @@ import Counter from '../counter';
 const Home = () => {
   return (
     <div>
-      <h1>React + Redux + Typescript</h1>
+      <h1>React + Redux</h1>
       <ul>
         <li>
           <Link to="/">Home</Link>

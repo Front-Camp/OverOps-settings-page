@@ -1,18 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {increment, decrement, CounterAction} from '../../actions/counter';
+import {increment, decrement} from '../../actions/counter';
 
 import styles from './counter.scss';
 
-interface Props {
-  counter: number;
-  actions: {
-    increment: () => CounterAction;
-    decrement: () => CounterAction;
-  }
-}
-const Counter: React.SFC<Props> = ({counter, actions}) => {
+const Counter = ({counter, actions}) => {
   const {increment, decrement} = actions;
 
   return (
@@ -28,13 +21,13 @@ const Counter: React.SFC<Props> = ({counter, actions}) => {
   );
 };
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = state => {
   return {
     counter: state.counter,
   }
 };
 
-const mapActionsToProps = (dispatch: any) => {
+const mapActionsToProps = dispatch => {
   return {
     actions: bindActionCreators({increment, decrement}, dispatch)
   }

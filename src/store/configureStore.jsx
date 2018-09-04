@@ -9,11 +9,8 @@ const composeEnhancers = (
   window && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 ) || compose;
 
-interface InitialStore {
-  counter: number
-}
 
-const configureStore = (initialState: InitialStore) => {
+const configureStore = initialState => {
   const logger = createLogger();
 
   return createStore(
