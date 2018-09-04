@@ -7,8 +7,6 @@ import {createBrowserHistory} from 'history';
 import configureStore from './store/configureStore';
 import Routes from './routes';
 
-import './app.scss';
-
 const store = configureStore({counter: 0});
 
 const Index: React.SFC = () => (
@@ -22,4 +20,4 @@ const Index: React.SFC = () => (
 const appContainer = document.getElementById('app');
 const renderApp = () => render(<Index />, appContainer);
 
-export default renderApp;
+renderApp();

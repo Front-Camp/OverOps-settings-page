@@ -5,7 +5,7 @@ const jsLoaders = require('./loaders/js-loaders');
 
 module.exports = {
   entry: [
-    path.join(__dirname, '../src/index.js'),
+    path.join(__dirname, '../src/app.tsx'),
   ],
   target: 'web',
   mode: 'development',
