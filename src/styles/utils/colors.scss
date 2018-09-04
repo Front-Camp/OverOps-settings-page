@@ -1,62 +1,51 @@
-$ei-colors: (
-  // Aquamarine
-  aqua1F: #0d5562,
-  aqua2F: #2b8697,
-  aqua3F: #72b5c1,
-  aqua4F: #a9d9e2,
-  aqua5F: #c4ecf3,
-  aqua6F: #e3f6f8,
-  aqua1G: linear-gradient(to top, #0f3b3e, #092628),
-  aqua2G: linear-gradient(to bottom, #0c494c, #0d696e),
-  aqua3G: linear-gradient(to bottom, #137378, #198e94),
-  aqua4G: linear-gradient(to bottom, #1898a1, #2bb3bd),
-  aqua5G: linear-gradient(to bottom, #40bec7, #69d4db),
-  aqua6G: linear-gradient(to bottom, #7edae0, #a6dde0),
+$colors: (
+  // White
+  white1: #ffffff,
+  // Grey
+  grey1: #cbddf2,
+  grey2: #96a3b3,
+  grey3: #778796,
+  grey4: #5c656e,
+  grey5: #323a41,
+  grey6: #22272c,
+  grey7: #0b0b0b,
+  // Blue
+  blue1: #51b2e9,
+  blue2: #2eacd7,
+  // Red
+  red1: #ee6557,
+  // Green
+  green1: #8dc63f,
   // Purple
-  purple1F: #20042b,
-  purple2F: #541280,
-  purple3F: #72399d,
-  purple4F: #ac6dd5,
-  purple5F: #ce9af9,
-  purple6F: #d9c0f2,
-  purple1G: linear-gradient(to bottom, #2c0638, #480c5c),
-  purple2G: linear-gradient(to bottom, #581070, #6d1d8a),
-  purple3G: linear-gradient(to bottom, #762594, #8a37ad),
-  purple4G: linear-gradient(to bottom, #9544b8, #ae62cc),
-  purple5G: linear-gradient(to bottom, #b96fd6, #c88ee5),
-  purple6G: linear-gradient(to bottom, #d2a0eb, #e1baf5),
-  // Rose
-  rose1F: #740b48,
-  rose2F: #a03071,
-  rose3F: #c5669f,
-  rose4F: #eea5d1,
-  rose5F: #fbc7e6,
-  rose6F: #fde3f4,
-  rose1G: linear-gradient(to bottom, #3c0825, #62113f),
-  rose2G: linear-gradient(to bottom, #6e1847, #8c2357),
-  rose3G: linear-gradient(to bottom, #9c2769, #b53e81),
-  rose4G: linear-gradient(to bottom, #c94288, #e05ca3),
-  rose5G: linear-gradient(to bottom, #e063aa, #e084b9),
-  rose6G: linear-gradient(to bottom, #eb91c4, #f7add7),
-  // Orange
-  orange1F: #d74607,
-  orange2F: #f56d1b,
-  orange3F: #f5973c,
-  orange4F: #fab240,
-  orange5F: #f8c75f,
-  orange6F: #f9da96,
+  purple1: #8863b8,
+  // Black
+  black1: #000000
+);
+
+$fontSizes: (
+  title: 16px,
+  subTitle: 14px,
+  regular: 13px
 );
 
 // Get the value of the color from the ei-colors map
 @function theme-color($name) {
-  @if map-has-key($ei-colors, $name) {
-    @return map_get($ei-colors, $name);
+  @if map-has-key($colors, $name) {
+    @return map_get($colors, $name);
+  }
+  @warn "The key #{$name} is not in the map ’$layer’";
+  @return null;
+}
+
+@function get-font-size($name) {
+  @if map-has-key($fontSizes, $name) {
+    @return map_get($fontSizes, $name);
   }
   @warn "The key #{$name} is not in the map ’$layer’";
   @return null;
 }
 
 // Generate color, bg and bg-gradient classes for each color
-@include gen-palette($ei-colors);
+//@include gen-palette($colors);
 
 
