@@ -16,7 +16,7 @@ const Counter = ({counter, actions}) => {
       </div>
       <div>
         <Button variant="contained" color="primary" onClick={() => increment()}>+1</Button>
-        <Button variant="contained" color="primary" className={styles.btn} onClick={() => decrement()}>-1</Button>
+        <Button variant="contained" color="secondary" className={styles.btn} onClick={() => decrement()}>-1</Button>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 // Generate a color palette based onf the passed array of colors
 @mixin gen-palette($colorsArray) {
-  @each $colorName, $colorValue in $colorsArray{
+  @each $colorName, $colorValue in $colorsArray {
     @if(ends-with($colorName, 'G')) {
       .#{str-replace($colorName, 'G', '')}-bg-gradient {
         background-image: map_get($colorsArray, $colorName)
