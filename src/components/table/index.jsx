@@ -67,7 +67,7 @@ const rows = [
 class EnvironmentsTable extends Component {
   state = {
     revealKeyIdForRow: null
-  }
+  };
 
   render () {
     const {classes} = this.props;
