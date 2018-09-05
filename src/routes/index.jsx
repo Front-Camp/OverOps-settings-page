@@ -14,7 +14,7 @@ export class Routes extends React.Component {
       <Switch>
         <Route path='/environments' component={Environments} />
         {/* <Route path='/navigation' component={Navigation} /> */}
-        {links.map(link => <Route key={link} path={link} component={() => <div>{link.slice(1)}</div>} />)}
+        {/* {links.map(link => <Route key={link} path={link} component={() => <div>{link.slice(1)}</div>} />)} */}
         <Route
           path={Routes.root}
           render={() => <Home />} />

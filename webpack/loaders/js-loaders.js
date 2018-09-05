@@ -5,10 +5,10 @@ module.exports = [
       cacheDirectory: true
     }
   },
-  {
-    loader: 'eslint-loader',
-    options: {
-      // eslint options (if necessary)
-    }
-  }
+  // {
+  //   loader: 'eslint-loader',
+  //   options: {
+  //     // eslint options (if necessary)
+  //   }
+  // }
 ];
