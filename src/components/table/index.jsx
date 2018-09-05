@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -10,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 
 import SettingsIcon from '@material-ui/icons/Settings';
 import EyeIcon from '@material-ui/icons/RemoveRedEye';
+import {hideCharacters} from './utils';
 
 const styles = theme => ({
   root: {
@@ -24,7 +25,7 @@ const styles = theme => ({
   },
   cell: {
     color: '#fff',
-    borderBottom: '1px solid  #5c656e'
+    borderBottom: '1px solid #5c656e'
   },
   actions: {
     color: '#51b2e9',
@@ -41,7 +42,10 @@ const styles = theme => ({
   },
   icon: {
     fontSize: '14px',
-    color: '#51b2e9'
+    color: '#51b2e9',
+    position: 'relative',
+    top: '2px',
+    marginRight: '3px'
   }
 });
 
@@ -60,11 +64,14 @@ const rows = [
   createData('Jenny\'s', 'S159231474129903482015837223451360309152513', 'Member'),
 ];
 
-function SimpleTable(props) {
-  const { classes } = props;
+class EnvironmentsTable extends Component {
+  state = {
+    revealKeyIdForRow: null
+  }
 
-  return (
-    <Paper className={classes.root}>
+  render () {
+    const {classes} = this.props;
+    return (<Paper className={classes.root}>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
@@ -75,13 +82,19 @@ function SimpleTable(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => {
+          {rows.map((row, i) => {
             return (
               <TableRow key={row.id}>
                 <TableCell className={classes.cell} component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell className={classes.cell}>{row.keyId}<EyeIcon className={classes.icon} /></TableCell>
+                <TableCell className={classes.cell}>
+                  {this.state.revealKeyIdForRow === i ? row.keyId : hideCharacters(row.keyId)}
+                  <span onClick={() => this.setState({revealKeyIdForRow: i})} style={{
+                    marginLeft: '5px',
+                    cursor: 'pointer'
+                  }}><EyeIcon className={classes.icon} /></span>
+                </TableCell>
                 <TableCell className={classes.cell}>{row.role}</TableCell>
                 <TableCell className={classes.cellWithoutBorder}>
                   <div className={classes.actions}>
@@ -95,12 +108,12 @@ function SimpleTable(props) {
           })}
         </TableBody>
       </Table>
-    </Paper>
-  );
+    </Paper>);
+  }
 }
 
-SimpleTable.propTypes = {
+EnvironmentsTable.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleTable);
+export default withStyles(styles)(EnvironmentsTable);
