@@ -1,5 +1,4 @@
 .navigation {
-    outline: 1px solid red;
 }
 
 .navigation-section {
@@ -12,11 +11,33 @@
   line-height: 1.75;
   letter-spacing: normal;
   text-align: left;
-  color: #ffffff;
+  margin-left: 8px;
 }
 
 .navigation-item {
   color: #96a3b3;
   line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   cursor: pointer;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    visibility: hidden;
+    width: 4px;
+    height: 16px;
+    background: #51b2e9;;
+    margin-right: 5px;
+  }
+
+  &.active::before {
+    visibility: visible;
+  }
 }
+
+.active-link-indicator {
+  display: inline-block;
+}
+
