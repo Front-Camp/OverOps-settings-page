@@ -1,5 +1,9 @@
+// TODO: add global styles
+
 :global{
-  html, body {
+  html,
+  body,
+  #app {
     height: 100%;
     min-height: 100%;
     background: #323a41;
@@ -7,5 +11,7 @@
     font-family: Roboto;
   }
 
-  // TODO: add global styles
+  a {
+    color: #fff;
+  }
 }
