@@ -1,6 +1,7 @@
-import React from 'react';
-import styles from './environments.scss';
+import * as React from 'react';
 import Table from '../../table';
+
+import styles from './environments.scss';
 
 const Environments = () => (
   <div className={styles.environments}>

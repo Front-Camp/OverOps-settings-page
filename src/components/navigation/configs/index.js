@@ -1,11 +1,37 @@
-export const navigationSections = [
+const general = [
   {
-    title: 'General Settings',
+    title: 'OverOps',
     links: [
       {
         label: 'Environments',
         path: '/environments'
+      }
+    ]
+  },
+  {
+    title: 'User',
+    links: [
+      {
+        label: 'Personal Data',
+        path: '/personal-data'
       },
+      {
+        label: 'API',
+        path: '/api'
+      }
+    ]
+  },
+];
+
+const environment = [
+  {
+    title: 'General Settings',
+    links: [
+      // TODO: need do discuss
+      // {
+      //   label: 'Environment',
+      //   path: '/environment'
+      // },
       {
         label: 'Team',
         path: '/team'
@@ -72,3 +98,10 @@ export const navigationSections = [
     ]
   }
 ];
+
+const config = {
+  environment,
+  general
+};
+
+export default config;

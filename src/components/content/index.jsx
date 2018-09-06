@@ -1,17 +1,18 @@
 import React from 'react';
-import Navigation from '../navigation';
 import Header from '../header';
 import Breadcrumbs from '../breadcrumbs';
-import Settings from '../settings';
 
 import styles from './content.scss';
+import Navigation from '../navigation';
+import Settings from '../settings';
 
 const Content = () => {
   return (
     <div className={styles.content}>
       <Header />
       <div className={styles.body}>
-        <Breadcrumbs/>
+        <Breadcrumbs />
+
         <div className={styles['settings-body']}>
           <div className={styles.navigation}>
             <Navigation />

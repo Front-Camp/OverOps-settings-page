@@ -4,12 +4,13 @@ import Content from '../components/content';
 
 // TODO: rethink it. Maybe this file redundant
 export class Routes extends React.Component {
-  static root = '/';
+  static root = '/settings';
 
   render () {
     return (
       <Switch>
-        <Route path={Routes.root} render={() => <Content />} />
+        <Route exact path={Routes.root} component={Content} />
+        <Route path={`${Routes.root}/:subRoute`} component={Content} />
         <Route render={() => <Redirect to={Routes.root} />} />
       </Switch>
     );

@@ -11,6 +11,7 @@ import Paper from '@material-ui/core/Paper';
 import SettingsIcon from '@material-ui/icons/Settings';
 import EyeIcon from '@material-ui/icons/RemoveRedEye';
 import {hideCharacters} from './utils';
+import {Link} from 'react-router-dom';
 
 const styles = theme => ({
   root: {
@@ -100,7 +101,10 @@ class EnvironmentsTable extends Component {
                   <div className={classes.actions}>
                     <span className={classes.action}>Install</span>
                     <span>{' | '}</span>
-                    <span className={classes.action}><SettingsIcon className={classes.icon} />Settings</span>
+                    <span className={classes.action}>
+                      <SettingsIcon className={classes.icon} />
+                      <Link to={`/settings/environment/${row.id}`}>Settings</Link>
+                    </span>
                   </div>
                 </TableCell>
               </TableRow>

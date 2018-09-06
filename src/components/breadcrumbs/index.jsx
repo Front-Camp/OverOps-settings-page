@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link, withRouter} from 'react-router-dom';
 import styles from './breadcrumbs.scss';
 
 const Breadcrumbs = () => {
@@ -7,9 +7,10 @@ const Breadcrumbs = () => {
 
   return (
     <div className={styles.breadcrumbs}>
-      Settings &gt; Environments
+      <Link to="/settings/environments">Settings</Link>
+      &gt; Environments
     </div>
   );
 };
 
-export default Breadcrumbs;
+export default withRouter(Breadcrumbs);
