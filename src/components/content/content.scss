@@ -1,0 +1,26 @@
+.content {
+  outline: 1px solid red;
+  height: 100%;
+  overflow: hidden;
+
+  .body {
+    padding: 40px;
+  }
+
+  .settings-body {
+      outline: 1px solid deepskyblue;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+
+    .navigation {
+        outline: 1px solid red;
+      flex: 0 0 200px
+    }
+
+    .settings {
+        outline: 1px solid red;
+      flex: 0 0 calc(100% - 200px);
+    }
+  }
+}

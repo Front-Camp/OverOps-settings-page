@@ -1,0 +1,39 @@
+.header {
+    outline: 1px solid white;
+  width: 100%;
+  height: 48px;
+  background-color: #131f29;
+  display: flex;
+
+  .left-cell,
+  .right-cell {
+      outline: 1px solid red;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .left-cell {
+    justify-content: flex-start;
+  }
+
+  .right-cell {
+    justify-content: flex-end;
+  }
+
+  .logo {
+      outline: 1px solid red;
+    height: 100%;
+    width: 58px;
+    display: flex;
+    align-items: center;
+  }
+
+  .info {
+      outline: 1px solid red;
+    height: 100%;
+    width: 58px;
+    display: flex;
+    align-items: center;
+  }
+}
