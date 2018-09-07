@@ -1,4 +1,4 @@
-# React-redux-starter
+# OverOps-settings-page
 
 ## Tech stack
 
