@@ -11,7 +11,7 @@ module.exports = {
   mode: 'development',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist')
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -37,8 +37,9 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: path.join(__dirname, '..', './dist'),
     compress: true,
+    publicPath: '/',
+    contentBase: path.join(__dirname, '..', './dist'),
     port: 3001,
     historyApiFallback: true
   }

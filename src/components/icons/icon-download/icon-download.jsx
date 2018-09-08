@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
@@ -6,7 +7,7 @@ export const IconDownload = ({size, color}) => (
   <svg width={size} height={size} viewBox="0 0 24 24">
     <g fill={color}>
       <path
-        d={`M15,23.9c0.3,0,0.5-0.3,0.5-0.5l-0.3-2.5H8.8l-0.3,2.5c0,0.3,0.2,0.5,0.5,0.5H15z 
+        d={`M15,23.9c0.3,0,0.5-0.3,0.5-0.5l-0.3-2.5H8.8l-0.3,2.5c0,0.3,0.2,0.5,0.5,0.5H15z
         M2.2,20.2h6.7h6.3h6.7
         c0.7,0,1.2-0.5,1.2-1.2V6.2C23,5.6,22.5,5,21.8,5H17v1.9h3.3c0.4,0,0.6,
         0.3,0.6,0.6v10.1c0,0.4-0.3,0.6-0.6,0.6h-5.4H9.1H3.7
@@ -23,4 +24,9 @@ export const IconDownload = ({size, color}) => (
 IconDownload.defaultProps = {
   size: config.size,
   color: config.color
+};
+
+IconDownload.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
 };

@@ -1,4 +1,8 @@
 .navigation {
+  box-shadow: 1px 0 0 0 #4a525a;
+  border-right: solid 1px theme-color(grey6);
+  height: 100%;
+  flex: 0 0 200px
 }
 
 .navigation-section {

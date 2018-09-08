@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
@@ -19,4 +20,9 @@ export const IconEye = ({size, color}) => (
 IconEye.defaultProps = {
   size: config.size,
   color: config.color
+};
+
+IconEye.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
 };

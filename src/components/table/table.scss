@@ -1,0 +1,20 @@
+@import '../../styles/utils/colors';
+
+.table {
+  font-size: 14px;
+}
+
+.heading {
+  font-weight: bold;
+  text-align: left;
+}
+
+.cell {
+  padding: 20px 20px 20px 10px;
+  border-bottom: 1px solid theme-color(grey4);
+}
+
+// TODO: make convention!
+.noButtonBorder {
+  border-bottom: none;
+}
