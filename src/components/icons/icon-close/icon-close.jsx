@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
@@ -16,4 +17,9 @@ export const IconClose = ({size, color}) => (
 IconClose.defaultProps = {
   size: config.size,
   color: config.color
+};
+
+IconClose.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
 };

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
@@ -15,4 +16,9 @@ export const IconChevron = ({size, color}) => (
 IconChevron.defaultProps = {
   size: config.size,
   color: config.color
+};
+
+IconChevron.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
 };

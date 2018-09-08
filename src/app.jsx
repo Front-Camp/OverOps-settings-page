@@ -9,6 +9,7 @@ import Routes from './routes';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './app.scss';
 
+// TODO: rethink it
 const theme = createMuiTheme({
   palette: {
     primary: { main: '#323a41' }, // Purple and green play nicely together.
@@ -23,9 +24,7 @@ const Index = () => (
   <MuiThemeProvider theme={theme}>
     <Provider store={store}>
       <Router history={createBrowserHistory()}>
-        <div style={{display: 'flex'}}>
-          <Routes />    
-        </div>
+        <Routes />
       </Router>
     </Provider>
   </MuiThemeProvider>

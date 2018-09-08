@@ -2,9 +2,9 @@ import * as React from 'react';
 
 const PersonalData = () => {
   return (
-    <div>
+    <section>
       PersonalData
-    </div>
+    </section>
   );
 };
 

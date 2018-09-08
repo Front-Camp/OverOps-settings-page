@@ -8,7 +8,7 @@ import Settings from '../settings';
 
 const Content = () => {
   return (
-    <div className={styles.content}>
+    <main className={styles.content}>
       <Header />
       <div className={styles.body}>
         <Breadcrumbs />
@@ -22,7 +22,7 @@ const Content = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

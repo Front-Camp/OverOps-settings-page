@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
@@ -18,4 +19,9 @@ export const IconEdit = ({size, color}) => (
 IconEdit.defaultProps = {
   size: config.size,
   color: config.color
+};
+
+IconEdit.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
 };

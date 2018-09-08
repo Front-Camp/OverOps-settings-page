@@ -17,14 +17,34 @@ module.exports = {
       "ecmaVersion": 2018,
       "sourceType": "module"
   },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",  // Pragma to use, default to "React"
+      "version": "16", // React version, default to the latest React stable release
+      // "flowVersion": "0.53" // Flow version
+    }
+  },
   "plugins": [
     "react",
     "jest"
   ],
   "rules": {
       "indent": [
-          "error",
-          2
+        "error",
+        2,
+        {
+          "SwitchCase": 1,
+          "ignoredNodes": [ "JSXAttribute", "JSXSpreadAttribute", ],
+        }
+      ],
+      "max-len": [
+        "error",
+        {
+          "ignoreTrailingComments": true,
+          "ignoreComments": true,
+          "code": 100
+        }
       ],
       "linebreak-style": [
           "warn",
@@ -38,6 +58,8 @@ module.exports = {
           "error",
           "always"
       ],
-      "react/prop-types": 1
+      /* React rules */
+      "react/prop-types": 1,
+      "react/jsx-indent-props": [1, 'first'],
   }
 };

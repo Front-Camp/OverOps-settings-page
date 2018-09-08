@@ -1,0 +1,33 @@
+.add-environment {
+  margin-top: 50px;
+}
+
+.btn-wrapper {
+  padding: 0 20px;
+  display: inline-block;
+}
+
+.input-wrapper {
+  height: 30px;
+  width: 330px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.label {
+  font-size: get-font-size(regular);
+  margin-right: 20px;
+  svg {
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-size: get-font-size(title);
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: theme-color(white1);
+}
+

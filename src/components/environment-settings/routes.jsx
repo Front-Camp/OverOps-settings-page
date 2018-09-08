@@ -13,6 +13,8 @@ import Dashboard from './dashboard';
 import FilterCode from './filter-code';
 import EmailServer from './email-server';
 
+// TODO: maybe we can build routes dynamically
+
 export class EnvironmentRoutes extends React.Component {
   render () {
     return (
@@ -29,7 +31,9 @@ export class EnvironmentRoutes extends React.Component {
         <Route path="/settings/environment/:envName/public-metrics" component={PublicMetrics} />
         <Route path="/settings/environment/:envName/jira" component={Jira} />
         <Route path="/settings/environment/:envName/git" component={Git} />
-        <Redirect from="/settings/environment/:envName" exact to="/settings/environment/:envName/team" />
+        <Redirect exact
+                  from="/settings/environment/:envName"
+                  to="/settings/environment/:envName/team" />
       </Switch>
     );
   }

@@ -2,9 +2,9 @@ import * as React from 'react';
 
 const Api = () => {
   return (
-    <div>
+    <section>
       Api
-    </div>
+    </section>
   );
 };
 

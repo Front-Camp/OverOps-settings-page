@@ -3,12 +3,10 @@ import {createLogger} from 'redux-logger';
 import thunk from 'redux-thunk';
 
 import rootReducer from '../reducers';
-// import {example} from './enhancers/example';
 
 const composeEnhancers = (
   window && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 ) || compose;
-
 
 const configureStore = initialState => {
   const logger = createLogger();
@@ -16,7 +14,7 @@ const configureStore = initialState => {
   return createStore(
     rootReducer,
     initialState,
-    composeEnhancers(applyMiddleware(thunk, logger, /*example*/))
+    composeEnhancers(applyMiddleware(thunk, logger))
   );
 };
 

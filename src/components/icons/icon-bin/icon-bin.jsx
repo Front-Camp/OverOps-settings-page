@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
@@ -8,7 +9,7 @@ export const IconBin = ({size, color}) => (
       <path
         d={`M19.1,3.2h-3.3V1.7c0-1.2-0.4-1.5-1.5-1.5H9.7c-1,0-1.5,0.5-1.5,
         1.5v1.5H4.9c-0.7,0-1.2,0.5-1.2,1.1s0.5,1.1,1.2,1.1h14.2
-        c0.7,0,1.2-0.5,1.2-1.1C20.3,3.7,19.8,3.2,19.1,3.2z 
+        c0.7,0,1.2-0.5,1.2-1.1C20.3,3.7,19.8,3.2,19.1,3.2z
         M14.3,3.2H9.7V1.7h4.5v1.5H14.3z M3.6,7.2l1.6,14.5c0,0.1,0.1,0.2,0.1,0.4
         c0.1,0.2,0.2,0.5,0.4,0.7c0.5,0.6,1.3,1,2.3,1h7.9c1,0,1.7-0.4,
         2.3-1c0.2-0.2,0.3-0.5,0.4-0.7s0.1-0.3,0.1-0.4l1.6-14.5L3.6,7.2
@@ -23,4 +24,9 @@ export const IconBin = ({size, color}) => (
 IconBin.defaultProps = {
   size: config.size,
   color: config.color
+};
+
+IconBin.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
 };

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
@@ -32,4 +33,9 @@ export const IconSetting = ({size, color}) => (
 IconSetting.defaultProps = {
   size: config.size,
   color: config.color
+};
+
+IconSetting.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string
 };
