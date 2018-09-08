@@ -6,7 +6,6 @@ import {createBrowserHistory} from 'history';
 
 import configureStore from './store/configureStore';
 import Routes from './routes';
-
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './app.scss';
 
@@ -24,7 +23,9 @@ const Index = () => (
   <MuiThemeProvider theme={theme}>
     <Provider store={store}>
       <Router history={createBrowserHistory()}>
-        <Routes />
+        <div style={{display: 'flex'}}>
+          <Routes />    
+        </div>
       </Router>
     </Provider>
   </MuiThemeProvider>

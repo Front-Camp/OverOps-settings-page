@@ -1,3 +1,85 @@
+@import '../../../styles/utils/colors';
+
 .environments {
-  // TODO: add styles
+  margin: 50px 0 0 50px;
+  display: flex;
+
+  .navigation {
+    margin-right: 100px;
+  }
+  // margin: 0
+}
+
+.heading {
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: get-font-size(title);
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: theme-color(white1);
+}
+
+.subtitle {
+  font-size: get-font-size(subTitle);
+  font-weight: normal;
+  color: theme-color(white1);
+}
+
+.link {
+  color: theme-color(blue1);
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.label {
+  font-size: get-font-size(regular);
+  margin-right: 20px;
+  svg {
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+  }
+}
+
+.input {
+  width: 330px;
+  margin-right: 20px;
+}
+
+.button {
+  padding: 0 20px;
+}
+
+.install_settings__container {
+
+  svg {
+    position: relative;
+    top: 2px;
+    padding-right: 5px;
+  }
+
+  .install {
+    margin-right: 10px;
+    cursor: pointer;
+    color: theme-color(blue1);
+  }
+
+  .delimeter {
+    color: theme-color(grey1);
+  }
+
+  .settings {
+    margin-left: 10px;
+    cursor: pointer;
+    color: theme-color(blue1);
+  }
+}
+
+.navigation_separator {
+  margin-right: 50px;
+  box-shadow: 1px 0 0 0 #4a525a;
+  border: solid 1px theme-color(grey6);
 }
