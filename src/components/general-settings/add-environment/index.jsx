@@ -7,7 +7,7 @@ import styles from './add-environment.scss';
 
 const AddEnvironment = () => {
   return (
-    <div className={styles['add-environment']}>
+    <section className={styles['add-environment']}>
       <h1 className={styles.title}>Add an Environment</h1>
 
       <span className={styles.label}>
@@ -22,7 +22,7 @@ const AddEnvironment = () => {
       <div className={styles['btn-wrapper']}>
         <Button>Add</Button>
       </div>
-    </div>
+    </section>
   );
 };
 

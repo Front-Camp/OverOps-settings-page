@@ -5,18 +5,4 @@
   .body {
     padding: 40px;
   }
-
-  .settings-body {
-      outline: 1px solid deepskyblue;
-    height: 100%;
-    display: flex;
-
-    .navigation {
-      flex: 0 0 200px
-    }
-
-    .settings {
-      flex: 0 0 calc(100% - 200px);
-    }
-  }
 }

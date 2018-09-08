@@ -7,6 +7,8 @@ import {createBrowserHistory} from 'history';
 import configureStore from './store/configureStore';
 import Routes from './routes';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {services} from './store/__mocks__/mocked-store';
+
 import './app.scss';
 
 // TODO: rethink it
@@ -17,7 +19,10 @@ const theme = createMuiTheme({
   },
 });
 
-const store = configureStore({counter: 0});
+const store = configureStore({
+  counter: 0,
+  services
+});
 
 // TODO: implement theme provider https://material-ui.com/customization/themes/
 const Index = () => (

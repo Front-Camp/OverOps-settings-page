@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
-import Content from '../components/content';
+import Content from './components/content/index';
 
 // TODO: rethink it. Maybe this file redundant
 export class Routes extends React.Component {
@@ -9,9 +9,8 @@ export class Routes extends React.Component {
   render () {
     return (
       <Switch>
-        <Route exact path={Routes.root} component={Content} />
-        <Route path={`${Routes.root}/:subRoute`} component={Content} />
-        <Route render={() => <Redirect to={Routes.root} />} />
+        <Route path={Routes.root} component={Content} />
+        <Route render={() => <Redirect from={`${Routes.root}`} to={Routes.root} />} />
       </Switch>
     );
   }

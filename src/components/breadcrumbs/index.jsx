@@ -7,8 +7,13 @@ const Breadcrumbs = () => {
 
   return (
     <div className={styles.breadcrumbs}>
-      <Link to="/settings/environments">Settings</Link>
-      &gt; Environments
+      <div>
+        <Link to="/settings/environments">General Settings</Link>
+      </div>
+      <div>
+        <Link to="/settings/environment/Dev">Environment Settings</Link>
+      </div>
+      {/*&gt; Environments*/}
     </div>
   );
 };

@@ -4,7 +4,7 @@ const general = [
     links: [
       {
         label: 'Environments',
-        path: '/environments'
+        path: 'environments'
       }
     ]
   },
@@ -13,11 +13,11 @@ const general = [
     links: [
       {
         label: 'Personal Data',
-        path: '/personal-data'
+        path: 'personal-data'
       },
       {
         label: 'API',
-        path: '/api'
+        path: 'api'
       }
     ]
   },
@@ -34,19 +34,19 @@ const environment = [
       // },
       {
         label: 'Team',
-        path: '/team'
+        path: 'team'
       },
       {
         label: 'Alerts',
-        path: '/alerts'
+        path: 'alerts'
       },
       {
         label: 'Dashboard',
-        path: '/dashboard'
+        path: 'dashboard'
       },
       {
         label: 'Filter Code',
-        path: '/filter-code'
+        path: 'filter-code'
       }
     ]
   },
@@ -55,11 +55,11 @@ const environment = [
     links: [
       {
         label: 'Storage',
-        path: '/storage'
+        path: 'storage'
       },
       {
         label: 'Email Server',
-        path: '/email-server'
+        path: 'email-server'
       }
     ]
   },
@@ -68,15 +68,15 @@ const environment = [
     links: [
       {
         label: 'Data redaction',
-        path: '/data-redaction'
+        path: 'data-redaction'
       },
       {
         label: 'LDAP',
-        path: '/ldap'
+        path: 'ldap'
       },
       {
         label: 'SAML',
-        path: '/saml'
+        path: 'saml'
       }
     ]
   },
@@ -85,15 +85,15 @@ const environment = [
     links: [
       {
         label: 'Public metrics',
-        path: '/public-metrics'
+        path: 'public-metrics'
       },
       {
         label: 'Jira',
-        path: '/jira'
+        path: 'jira'
       },
       {
         label: 'Git',
-        path: '/git'
+        path: 'git'
       }
     ]
   }
