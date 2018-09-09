@@ -7,7 +7,7 @@ import {createBrowserHistory} from 'history';
 import configureStore from './store/configureStore';
 import Routes from './routes';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import {services, teamMembers} from './store/__mocks__/mocked-store';
+import {services, teamMembers} from './store/__mocks__/store.mock';
 
 import './app.scss';
 
