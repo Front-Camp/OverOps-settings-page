@@ -1,14 +1,27 @@
-import React from 'react';
+import * as React from 'react';
+
+import {IconQuestionCircleOutline, IconLogo} from '../icons';
 import styles from './header.scss';
+
+const onClick = () => {
+  window.location.reload();
+};
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <div className={styles['left-cell']}>
-        <div className={styles.logo}>logo</div>
+      <div
+        onClick={onClick}
+        className={styles['left-cell']}
+      >
+        <div className={styles.logo}>
+          <IconLogo />
+        </div>
       </div>
       <div className={styles['right-cell']}>
-        <div className={styles.info}>?</div>
+        <div className={styles.info}>
+          <IconQuestionCircleOutline color={'#fff'} size={19} />
+        </div>
       </div>
     </div>
   );

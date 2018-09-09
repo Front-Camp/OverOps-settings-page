@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {IconQuestion} from '../../icons/icon-question';
+import {IconQuestionCircle} from '../../icons';
 import Input from '../../controls/input';
 import Button from '../../controls/button';
 
@@ -12,7 +12,7 @@ const AddEnvironment = () => {
 
       <span className={styles.label}>
         Generate a new license key: &nbsp;
-        <IconQuestion colors={['#fff', '#5c656e']} size={14} />
+        <IconQuestionCircle colors={['#fff', '#5c656e']} size={14} />
       </span>
 
       <div className={styles['input-wrapper']}>
