@@ -1,4 +1,4 @@
-.environments {
+.environments-list {
   .heading {
     padding-left: 10px;
     margin-bottom: 20px;
@@ -42,6 +42,11 @@
       margin-left: 10px;
       cursor: pointer;
       color: theme-color(blue1);
+
+      a {
+        text-decoration: none;
+        color: theme-color(blue1);
+      }
     }
   }
 }

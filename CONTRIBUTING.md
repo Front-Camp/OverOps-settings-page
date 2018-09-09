@@ -60,3 +60,10 @@ import styles from './your-awesome.scss';
 
 ### JS
   
+Please use "dash" pattern for naming directories and components:
+
+```
+  |__ your-awesome-directory
+    |__ your-super-component.jsx
+    ...
+```

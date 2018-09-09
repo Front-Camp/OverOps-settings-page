@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title Component should be rendered correctly 1`] = `
+<h4
+  className="title"
+/>
+`;

@@ -1,1 +1,5 @@
-// TODO: add unit tests
+describe('createReducers', () => {
+  test('should create reducers', () => {
+    // TODO: implement
+  });
+});

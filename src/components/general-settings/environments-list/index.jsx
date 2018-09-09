@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './environments.scss';
+import styles from './environments-list.scss';
 import Table from '../../table';
 import AddEnvironment from '../add-environment';
 import {IconDownload, IconSetting} from '../../icons';
@@ -34,14 +34,14 @@ const getConfig = arr => {
   };
 };
 
-const Environments = ({services}) => {
+const EnvironmentsList = ({services}) => {
   const mockedServices = services.map(item => {
     return [item.name, item.full_key, 'Owner'];
   });
   const config = getConfig(mockedServices);
 
   return (
-    <section className={styles.environments}>
+    <section className={styles['environments-list']}>
       <div className={styles.heading}>
         <Title>Environments</Title>
         <SubTitle>
@@ -61,4 +61,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, null)(Environments);
+export default connect(mapStateToProps, null)(EnvironmentsList);
