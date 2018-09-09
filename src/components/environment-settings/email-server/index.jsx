@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const EmailServer = () => {
   return (
-    <div>
-      EmailServer
-    </div>
+    <section>
+      <Title>Email Server</Title>
+    </section>
   );
 };
 

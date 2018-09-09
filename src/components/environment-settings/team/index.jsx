@@ -6,6 +6,8 @@ import Button from '../../controls/button';
 import Table from '../../table';
 import styles from './team.scss';
 import {IconEdit, IconBin} from '../../icons';
+import Title from '../../controls/title';
+import SubTitle from '../../controls/subtitle';
 
 const blue1 = '#51b2e9';
 const grey2 = '#96a3b3';
@@ -37,11 +39,11 @@ const Team = ({teamMembers}) => {
   return (
     <section className={styles.team}>
       <div className={styles.heading}>
-        <h1 className={styles.title}>Team Management</h1>
-        <h4 className={styles.subtitle}>
+        <Title>Team Management</Title>
+        <SubTitle>
           Invite teammates to access your OverOps environment and root cause analysis.&nbsp;
           <a className={styles.link}>Learn more.</a>
-        </h4>
+        </SubTitle>
       </div>
       <div className={styles.invite_to_team_container}>
         <span className={styles.label}>Invite to team:</span>

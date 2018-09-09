@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const Git = () => {
   return (
-    <div>
-      Git
-    </div>
+    <section>
+      <Title>Git</Title>
+    </section>
   );
 };
 

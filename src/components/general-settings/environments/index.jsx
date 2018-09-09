@@ -5,6 +5,8 @@ import AddEnvironment from '../add-environment';
 import {IconDownload, IconSetting} from '../../icons';
 import connect from 'react-redux/es/connect/connect';
 import {Link} from 'react-router-dom';
+import Title from '../../controls/title';
+import SubTitle from '../../controls/subtitle';
 
 // TODO: move this to separate file
 const blue1 = '#51b2e9';
@@ -41,11 +43,11 @@ const Environments = ({services}) => {
   return (
     <section className={styles.environments}>
       <div className={styles.heading}>
-        <h1 className={styles.title}>Environments</h1>
-        <h4 className={styles.subtitle}>
+        <Title>Environments</Title>
+        <SubTitle>
           Manage all OverOps environments you can access from this machine. &nbsp;
           <a className={styles.link}>Learn more.</a>
-        </h4>
+        </SubTitle>
       </div>
       <Table config={config} />
       <AddEnvironment />

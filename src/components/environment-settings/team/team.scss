@@ -1,24 +1,9 @@
-@import '../../../styles/utils/colors';
-
 .team {
 
 }
 
 .heading {
   margin-bottom: 40px;
-}
-
-.title {
-  font-size: get-font-size(title);
-  margin-bottom: 20px;
-  font-weight: normal;
-  color: theme-color(white1);
-}
-
-.subtitle {
-  font-size: get-font-size(subTitle);
-  font-weight: normal;
-  color: theme-color(white1);
 }
 
 .link {

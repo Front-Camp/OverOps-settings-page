@@ -4,15 +4,16 @@ import Input from '../../controls/input';
 import Button from '../../controls/button';
 
 import styles from './add-environment.scss';
+import Title from '../../controls/title';
 
 const AddEnvironment = () => {
   return (
     <section className={styles['add-environment']}>
-      <h1 className={styles.title}>Add an Environment</h1>
+      <Title>Add an Environment</Title>
 
       <span className={styles.label}>
         Generate a new license key: &nbsp;
-        <IconQuestion colors={['#fff', '#5c656e']} size={14} />
+        <IconQuestion colors={['#5c656e', '#fff']} size={14} />
       </span>
 
       <div className={styles['input-wrapper']}>
