@@ -2,10 +2,12 @@ import {combineReducers} from 'redux';
 import {createReducers} from './createReducers';
 import counter from './counter';
 import services from './services';
+import teamMembers from './teamMembers';
 
 const reducers = {
   counter,
-  services
+  services,
+  teamMembers
 };
 
 const rootReducer = combineReducers({...createReducers(reducers)});

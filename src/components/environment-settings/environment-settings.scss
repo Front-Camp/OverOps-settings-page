@@ -1,5 +1,5 @@
 .environment-settings {
-    outline: 1px solid red;
+  outline: 1px solid red;
   height: 100%;
   display: flex;
 
@@ -9,6 +9,6 @@
 
   .settings {
     padding: 0 50px 50px 50px;
-    flex: 0 0 calc(100% - 200px);
+    flex: 1;
   }
 }

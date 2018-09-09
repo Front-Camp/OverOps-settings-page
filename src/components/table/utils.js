@@ -1,5 +1,5 @@
 export const hideCharacters = (str, from = 5) =>
-  str.slice(0, from) + str.slice(from + 1).replace(/./g, '*');
+  str.slice(0, from) + str.slice(from).replace(/./g, '*');
 
 
 // TODO: implement method for parsing keys string:

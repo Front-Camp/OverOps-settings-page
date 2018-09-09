@@ -24,10 +24,10 @@ const InstallAndSettings = ({keyName}) => (
 
 const getConfig = arr => {
   return {
-    headings: ['Key Name', 'Key ID', 'Role', {value: '', hasBorderBottom: false}],
+    headings: ['Key Name', 'Key ID', 'Role', {value: '', noBottomBorder: true}],
     body: arr.map(row => {
       const [keyName] = row;
-      return [...row, {value: <InstallAndSettings keyName={keyName} />, hasBorderBottom: false}];
+      return [...row, {value: <InstallAndSettings keyName={keyName} />, noBottomBorder: true}];
     })
   };
 };

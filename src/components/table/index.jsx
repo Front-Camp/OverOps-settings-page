@@ -7,30 +7,34 @@ const renderCellText = cell => {
   return typeof cell === 'object' ? cell.value : cell;
 };
 
-
 const getCssClasses = cell =>
-  typeof cell === 'object' && !cell.hasBorderBottom
-    ? `${styles.cell} ${styles.noButtonBorder}`
+  typeof cell === 'object' && cell.noBottomBorder
+    ? `${styles.cell} ${styles.noBottomBorder}`
     : styles.cell;
 
 const Table = ({config: {headings, body}}) => {
   return (
     <table className={styles.table}>
-      <thead>
+      {headings && <thead>
         <tr>{headings.map((cell, i) =>
           <th
             key={i}
+            style={cell.style ? cell.style : null}
             className={`${styles.heading} ${getCssClasses(cell)}`}>
             {renderCellText(cell)}
           </th>)}
         </tr>
-      </thead>
+      </thead>}
       <tbody>
         {body.map((row, i) =>
           <tr key={i}>
             {
               row.map((cell, i) =>
-                <td key={i} className={getCssClasses(cell)}>{renderCellText(cell)}</td>)
+                <td
+                  key={i}
+                  style={cell.style ? cell.style : null}
+                  className={getCssClasses(cell)}>
+                  {renderCellText(cell)}</td>)
             }
           </tr>
         )}
