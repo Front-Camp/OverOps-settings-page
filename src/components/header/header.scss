@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  @include set-size-bg(100%, 48px, #131f29);
+  @include set-size-bg(100%, 48px, theme-color(blue-dark));
   
   .left-cell,
   .right-cell {
@@ -25,12 +25,12 @@
 
   .logo {
     width: 58px;
-    border-right: 1px solid rgba(#cbddf2, 0.2);
+    border-right: 1px solid rgba(theme-color(grey1), 0.2);
     cursor: pointer;
   }
 
   .info {
     width: 54px;
-    border-left: 1px solid rgba(#cbddf2, 0.2);
+    border-left: 1px solid rgba(theme-color(grey1), 0.2);
   }
 }
