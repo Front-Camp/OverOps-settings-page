@@ -1,0 +1,5 @@
+node_modules
+dist
+stylelint.config.js
+*.mock.js
+jest.config.js

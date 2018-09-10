@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const Saml = () => {
   return (
-    <div>
-      Saml
-    </div>
+    <section>
+      <Title>Saml</Title>
+    </section>
   );
 };
 

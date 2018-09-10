@@ -1,0 +1,52 @@
+.environments-list {
+  .heading {
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .link {
+    color: theme-color(blue1);
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  .label {
+    font-size: get-font-size(regular);
+    margin-right: 20px;
+
+    svg {
+      position: relative;
+      top: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .install-settings-container {
+    svg {
+      position: relative;
+      top: 2px;
+      padding-right: 5px;
+    }
+
+    .install {
+      margin-right: 10px;
+      cursor: pointer;
+      color: theme-color(blue1);
+    }
+
+    .delimeter {
+      color: theme-color(grey1);
+    }
+
+    .settings {
+      margin-left: 10px;
+      cursor: pointer;
+      color: theme-color(blue1);
+
+      a {
+        text-decoration: none;
+        color: theme-color(blue1);
+      }
+    }
+  }
+}

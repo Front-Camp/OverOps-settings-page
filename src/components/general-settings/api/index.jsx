@@ -1,9 +1,10 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const Api = () => {
   return (
     <section>
-      Api
+      <Title>Api</Title>
     </section>
   );
 };

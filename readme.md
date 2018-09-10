@@ -6,9 +6,13 @@
 * [Redux](https://github.com/reduxjs/react-redux/) - Redux is a predictable state container for JavaScript apps.
 * [React Router](https://github.com/ReactTraining/react-router) - React Router id declarative routing for React
 * [Webpack](https://webpack.js.org/) - module bundler
-* [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX
-* [Jest](https://jestjs.io/) - Delightful JavaScript Testing
 * [SASS](https://sass-lang.com/) - CSS with superpowers
+
+### Code quality
+
+* [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX
+* [Stylelint](https://stylelint.io/) - The Modern linter that helps avoid errors and enforce conventions in styles.
+* [Jest](https://jestjs.io/) - Delightful JavaScript Testing
 
 ## Getting Started
 

@@ -7,7 +7,7 @@ import {createBrowserHistory} from 'history';
 import configureStore from './store/configureStore';
 import Routes from './routes';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import {services} from './store/__mocks__/mocked-store';
+import {services, teamMembers} from './store/__mocks__/store.mock';
 
 import './app.scss';
 
@@ -21,7 +21,8 @@ const theme = createMuiTheme({
 
 const store = configureStore({
   counter: 0,
-  services
+  services,
+  teamMembers
 });
 
 // TODO: implement theme provider https://material-ui.com/customization/themes/

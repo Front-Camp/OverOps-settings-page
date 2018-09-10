@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const Ldap = () => {
   return (
-    <div>
-      Ldap
-    </div>
+    <section>
+      <Title>Ldap</Title>
+    </section>
   );
 };
 

@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const Alerts = () => {
   return (
-    <div>
-      Alerts
-    </div>
+    <section>
+      <Title>Alerts</Title>
+    </section>
   );
 };
 

@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const Jira = () => {
   return (
-    <div>
-      Jira
-    </div>
+    <section>
+      <Title>Jira</Title>
+    </section>
   );
 };
 
