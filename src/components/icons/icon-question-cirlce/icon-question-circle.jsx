@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {config} from '../config';
 
-export const IconQuestion = ({size, colors}) => {
+export const IconQuestionCircle = ({size, colors}) => {
   const [first, second] = colors;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24">
@@ -26,12 +26,12 @@ export const IconQuestion = ({size, colors}) => {
   );
 };
 
-IconQuestion.defaultProps = {
+IconQuestionCircle.defaultProps = {
   size: config.size,
-  colors: [config.color, config.color]
+  colors: [config.colors[0], config.colors[1]]
 };
 
-IconQuestion.propTypes = {
+IconQuestionCircle.propTypes = {
   size: PropTypes.number,
   colors: PropTypes.arrayOf(PropTypes.string)
 };
