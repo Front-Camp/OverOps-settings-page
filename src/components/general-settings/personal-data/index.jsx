@@ -1,9 +1,10 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const PersonalData = () => {
   return (
     <section>
-      PersonalData
+      <Title>Personal Data</Title>
     </section>
   );
 };

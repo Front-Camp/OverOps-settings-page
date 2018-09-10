@@ -9,7 +9,6 @@ describe('Components', () => {
   const store = mockStore({});
 
   test('Counter', () => {
-    // @ts-ignore
     const checkbox = shallow(<Counter store={store} />);
 
     // Snapshot demo

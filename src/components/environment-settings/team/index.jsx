@@ -6,13 +6,15 @@ import Button from '../../controls/button';
 import Tag from '../../controls/tag';
 import Table from '../../table';
 import {IconEdit, IconBin} from '../../icons';
+import Title from '../../controls/title';
+import SubTitle from '../../controls/subtitle';
 import styles from './team.scss';
 
 const blue1 = '#51b2e9';
 const grey2 = '#96a3b3';
 
 const EditAndDelete = () => (
-  <div className={styles.edit_delete__container}>
+  <div className={styles['edit-delete-container']}>
     <span className={styles.edit}>
       <IconEdit size={14} color={blue1} />
     </span>
@@ -38,13 +40,13 @@ const Team = ({teamMembers}) => {
   return (
     <section className={styles.team}>
       <div className={styles.heading}>
-        <h1 className={styles.title}>Team Management</h1>
-        <h4 className={styles.subtitle}>
+        <Title>Team Management</Title>
+        <SubTitle>
           Invite teammates to access your OverOps environment and root cause analysis.&nbsp;
           <a className={styles.link}>Learn more.</a>
-        </h4>
+        </SubTitle>
       </div>
-      <div className={styles.invite_to_team_container}>
+      <div className={styles['invite-to-team-container']}>
         <span className={styles.label}>Invite to team:</span>
         <Input className={styles.input} placeholder="someone@company.com" />
         <Button>Add</Button>

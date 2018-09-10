@@ -18,3 +18,20 @@
     }
   }
 }
+
+@mixin set-size($width: 0px, $height: 0px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin set-size-bg($width: 0px, $height: 0px, $bg: inherit) {
+  @include set-size($width, $height);
+  background-color: $bg;
+}
+
+@mixin set-flex($flex-direction: row, $justify-content: flex-start, $align-items: stretch) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

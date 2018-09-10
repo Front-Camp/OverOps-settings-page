@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const DataRedaction = () => {
   return (
-    <div>
-      DataRedaction
-    </div>
+    <section>
+      <Title>Data Redaction</Title>
+    </section>
   );
 };
 

@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const Dashboard = () => {
   return (
-    <div>
-      Dashboard
-    </div>
+    <section>
+      <Title>Dashboard</Title>
+    </section>
   );
 };
 

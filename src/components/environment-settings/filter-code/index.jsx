@@ -1,10 +1,11 @@
 import * as React from 'react';
+import Title from '../../controls/title';
 
 const FilterCode = () => {
   return (
-    <div>
-      FilterCode
-    </div>
+    <section>
+      <Title>FilterCode</Title>
+    </section>
   );
 };
 

@@ -1,90 +1,88 @@
 .team {
-
-}
-
-.heading {
-  margin-bottom: 40px;
-}
-
-.title {
-  font-size: get-font-size(title);
-  margin-bottom: 20px;
-  font-weight: normal;
-  color: theme-color(white1);
-}
-
-.subtitle {
-  font-size: get-font-size(subTitle);
-  font-weight: normal;
-  color: theme-color(white1);
-}
-
-.link {
-  color: theme-color(blue1);
-  font-weight: normal;
-  cursor: pointer;
-}
-
-.label {
-  font-size: get-font-size(regular);
-  margin-right: 20px;
-  svg {
-    position: relative;
-    top: 3px;
-    cursor: pointer;
-  }
-}
-
-.edit_delete__container {
-
-  svg {
-    position: relative;
-    top: 2px;
-    padding-right: 5px;
+  .heading {
+    margin-bottom: 40px;
   }
 
-  .edit {
-    margin-right: 5px;
-    cursor: pointer;
+  .link {
     color: theme-color(blue1);
-  }
-
-  .delimeter {
-    color: theme-color(grey1);
-  }
-
-  .delete {
-    margin-left: 10px;
+    font-weight: normal;
     cursor: pointer;
-    color: theme-color(blue1);
   }
-}
 
-.invite_to_team_container {
-  margin-bottom: 40px;
-  
-  .input {
-    height: 30px;
-    max-width: 370px;
+  .label {
+    font-size: get-font-size(regular);
+    margin-right: 20px;
+
+    svg {
+      position: relative;
+      top: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .edit-delete-container {
+    svg {
+      position: relative;
+      top: 2px;
+      padding-right: 5px;
+    }
+
+    .edit {
+      margin-right: 5px;
+      cursor: pointer;
+      color: theme-color(blue1);
+    }
+
+    .delimeter {
+      color: theme-color(grey1);
+    }
+
+    .delete {
+      margin-left: 10px;
+      cursor: pointer;
+      color: theme-color(blue1);
+    }
+  }
+
+  .invite_to_team_container {
+    margin-bottom: 40px;
+    
+    .input {
+      height: 30px;
+      max-width: 370px;
+      margin-right: 10px;
+    }
+  }
+
+  .access_control_container {
+    margin-top: 40px;
+
+    .input {
+      height: 30px;
+      max-width: 250px;
+      margin-right: 10px;
+    }
+  }
+
+  .label {
     margin-right: 10px;
   }
-}
 
-.access_control_container {
-  margin-top: 40px;
-
-  .input {
-    height: 30px;
-    max-width: 250px;
-    margin-right: 10px;
+  .input_container {
+    margin-bottom: 40px;
   }
-}
 
+  .invite-to-team-container {
+    margin-bottom: 40px;
 
-.label {
-  margin-right: 10px;
-}
+    .label {
+      margin-right: 10px;
+    }
 
-.input_container {
-  margin-bottom: 40px;
+    .input {
+      height: 30px;
+      max-width: 370px;
+      margin-right: 10px;
+    }
+  }
 }
