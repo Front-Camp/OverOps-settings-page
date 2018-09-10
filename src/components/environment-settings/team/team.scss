@@ -54,6 +54,15 @@
     }
   }
 
+  .tags_container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      margin: 0 20px 10px 0;
+    }
+  }
+
   .access_control_container {
     margin-top: 40px;
 
