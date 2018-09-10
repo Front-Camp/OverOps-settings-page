@@ -1,15 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import connect from 'react-redux/es/connect/connect';
+import {toggleShowKeyId} from '../../../actions/services';
 import styles from './environments-list.scss';
 import Table from '../../table';
 import AddEnvironment from '../add-environment';
-import {IconDownload, IconSetting} from '../../icons';
-import connect from 'react-redux/es/connect/connect';
-import {Link} from 'react-router-dom';
+import {IconDownload, IconSetting, IconEye} from '../../icons';
 import Title from '../../controls/title';
 import SubTitle from '../../controls/subtitle';
+import {hideCharacters} from '../../table/utils';
 
 // TODO: move this to separate file
 const blue1 = '#51b2e9';
+const grey3 = '#778796';
 
 const InstallAndSettings = ({keyName}) => (
   <div className={styles['install-settings-container']}>
@@ -34,9 +37,19 @@ const getConfig = arr => {
   };
 };
 
-const EnvironmentsList = ({services}) => {
+const EnvironmentsList = ({services, toggleShowKeyId}) => {
   const mockedServices = services.map(item => {
-    return [item.name, item.full_key, 'Owner'];
+    const keyID = {
+      value: <span
+        key="key_id"
+        className={styles['key-id-cell']}>
+        {item.show ? item.full_key : hideCharacters(item.full_key)}
+        <span onClick={() => toggleShowKeyId(item.name)}>
+          <IconEye color={item.show ? grey3 : blue1} />
+        </span>
+      </span>
+    };
+    return [item.name, keyID, 'Owner'];
   });
   const config = getConfig(mockedServices);
 
@@ -61,4 +74,8 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, null)(EnvironmentsList);
+const mapDispatchToProps = dispatch => ({
+  toggleShowKeyId: keyId => dispatch(toggleShowKeyId(keyId)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EnvironmentsList);
