@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../header';
-import Breadcrumbs from '../breadcrumbs';
+// TODO: uncomment when it will be done
+// import Breadcrumbs from '../breadcrumbs';
 import ContentRoutes from './routes';
 
 import styles from './content.scss';
@@ -10,7 +11,7 @@ const Content = () => {
     <main className={styles.content}>
       <Header />
       <div className={styles.body}>
-        <Breadcrumbs />
+        {/*<Breadcrumbs />*/}
         <ContentRoutes/>
       </div>
     </main>

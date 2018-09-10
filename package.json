@@ -11,6 +11,12 @@
     "stylelint": "stylelint './src/**/*.scss'",
     "storybook": "start-storybook -p 6006"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run stylelint",
+      "pre-push": "npm test"
+    }
+  },
   "dependencies": {
     "@material-ui/core": "^3.0.2",
     "@material-ui/icons": "^3.0.1",
@@ -44,6 +50,7 @@
     "eslint-plugin-jest": "^21.22.0",
     "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.5.0",
     "node-sass": "^4.9.3",
