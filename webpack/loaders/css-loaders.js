@@ -23,8 +23,7 @@ module.exports = [
     loader: 'sass-resources-loader',
     options: {
       resources: [
-        path.resolve(__dirname, '../../src/styles/main.scss'),
-        path.resolve(__dirname, '../../src/styles/utils/mixins.scss'),
+        path.resolve(__dirname, '../../src/styles/main.scss')
       ]
     }
   }

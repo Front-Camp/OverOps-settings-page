@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  @include set-size-bg(100%, 48px, theme-color(blue-dark));
-  
+  @include set-size-bg(100%, 48px, theme-color(blue3));
+
   .left-cell,
   .right-cell {
     @include set-flex(row, flex-start, center);
