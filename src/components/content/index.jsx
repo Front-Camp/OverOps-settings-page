@@ -1,19 +1,20 @@
 import React from 'react';
 import Header from '../header';
-// TODO: uncomment when it will be done
-// import Breadcrumbs from '../breadcrumbs';
+import Breadcrumbs from '../breadcrumbs';
 import ContentRoutes from './routes';
+import Spinner from '../spinner';
 
 import styles from './content.scss';
 
 const Content = () => {
   return (
     <main className={styles.content}>
-      <Header />
+      <Header/>
       <div className={styles.body}>
-        {/*<Breadcrumbs />*/}
+        <Breadcrumbs />
         <ContentRoutes/>
       </div>
+      <Spinner/>
     </main>
   );
 };
