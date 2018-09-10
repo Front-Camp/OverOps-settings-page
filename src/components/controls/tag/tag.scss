@@ -1,0 +1,16 @@
+.container {
+  background-color: theme-color(grey4);
+  border-radius: 5px;
+  // height: 24px;
+  // height: 100%;
+  padding: 3px 10px;
+  width: 200px;
+  
+}
+
+.delimeter {
+  width: 1px;
+  height: 100%;
+  display: inline-block;
+  background: red;
+}

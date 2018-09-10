@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Input from '../../controls/input';
 import Button from '../../controls/button';
+import Tag from '../../controls/tag';
 import Table from '../../table';
-import styles from './team.scss';
 import {IconEdit, IconBin} from '../../icons';
+import styles from './team.scss';
 
 const blue1 = '#51b2e9';
 const grey2 = '#96a3b3';
@@ -49,6 +50,22 @@ const Team = ({teamMembers}) => {
         <Button>Add</Button>
       </div>
       <Table config={tableConfig} />
+
+      <div className={styles.access_control_container}>
+        <h1 className={styles.title}>Access control</h1>
+        <div className={styles.input_container}>
+          <span className={styles.label}>Allow access only to the following users:</span>
+          <Input className={styles.input} placeholder="someone@company.com" />
+          <Tag>user1@mycompany.com</Tag>
+          <Tag>user2@mycompany.com</Tag>
+        </div>
+        <div className={styles.input_container}>
+          <span className={styles.label}>Allow access only for the following IP{'\''}s:</span>
+          <Input className={styles.input} placeholder="127.0.0.1" />
+          <Tag>192.168.1.13</Tag>
+        </div>
+      </div>
+
     </section>
   );
 };
