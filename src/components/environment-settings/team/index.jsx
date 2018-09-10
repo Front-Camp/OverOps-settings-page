@@ -13,7 +13,7 @@ const blue1 = '#51b2e9';
 const grey2 = '#96a3b3';
 
 const EditAndDelete = () => (
-  <div className={styles.edit_delete__container}>
+  <div className={styles['edit-delete-container']}>
     <span className={styles.edit}>
       <IconEdit size={14} color={blue1} />
     </span>
@@ -45,7 +45,7 @@ const Team = ({teamMembers}) => {
           <a className={styles.link}>Learn more.</a>
         </SubTitle>
       </div>
-      <div className={styles.invite_to_team_container}>
+      <div className={styles['invite-to-team-container']}>
         <span className={styles.label}>Invite to team:</span>
         <Input className={styles.input} placeholder="someone@company.com" />
         <Button>Add</Button>

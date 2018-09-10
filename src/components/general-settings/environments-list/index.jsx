@@ -12,7 +12,7 @@ import SubTitle from '../../controls/subtitle';
 const blue1 = '#51b2e9';
 
 const InstallAndSettings = ({keyName}) => (
-  <div className={styles.install_settings__container}>
+  <div className={styles['install-settings-container']}>
     <span className={styles.install}>
       <IconDownload size={14} color={blue1} />Install
     </span>

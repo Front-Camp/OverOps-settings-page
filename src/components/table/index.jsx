@@ -9,7 +9,7 @@ const renderCellText = cell => {
 
 const getCssClasses = cell =>
   typeof cell === 'object' && cell.noBottomBorder
-    ? `${styles.cell} ${styles.noBottomBorder}`
+    ? `${styles.cell} ${styles['no-bottom-border']}`
     : styles.cell;
 
 const Table = ({config: {headings, body}}) => {
