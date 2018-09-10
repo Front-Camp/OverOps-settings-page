@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Link, withRouter} from 'react-router-dom';
 import config from './config';
+import classNames from 'classnames/bind';
 
 import styles from './navigation.scss';
+
+const stylesContext = classNames.bind(styles);
 
 class Navigation extends Component {
   state = {
@@ -11,19 +14,17 @@ class Navigation extends Component {
     activeLink: null
   };
 
-  // TODO: additionally we need to check location
-  checkIfLinkIsActive(section, link) {
-    return this.state.activeSection === section && this.state.activeLink === link;
-  }
-
   getNavigationItemClasses (section, link) {
-    return this.checkIfLinkIsActive(section, link)
-      ? `${styles['navigation-item']} ${styles.active}`
-      : styles['navigation-item'];
+    const {activeSection, activeLink} = this.state;
+
+    return stylesContext({
+      'navigation-item': true,
+      'active': activeSection === section && activeLink === link
+    });
   }
 
   render() {
-    // TODO: make refactoring!
+    const {match: {url}} = this.props;
 
     return (
       <nav className={styles.navigation}>
@@ -38,7 +39,7 @@ class Navigation extends Component {
                     onClick={() =>
                       this.setState({activeLink: link.label, activeSection: section.title})}>
 
-                    <Link to={`${this.props.match.url}/${link.path}`}
+                    <Link to={`${url}/${link.path}`}
                           className={this.getNavigationItemClasses(section.title, link.label)}>
                       <span className={styles['active-link-indicator']} />
                       <span>{link.label}</span>
@@ -54,6 +55,9 @@ class Navigation extends Component {
 }
 
 Navigation.propTypes = {
+  match: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+  }).isRequired,
   settings: PropTypes.string
 };
 

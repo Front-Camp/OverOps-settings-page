@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const cssLoaders = require('./loaders/css-loaders');
 const jsLoaders = require('./loaders/js-loaders');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -32,6 +33,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new StyleLintPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve('index.html')
     })

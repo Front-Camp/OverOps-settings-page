@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../header';
 import Breadcrumbs from '../breadcrumbs';
+import ContentRoutes from './routes';
 
 import styles from './content.scss';
-import ContentRoutes from './routes';
 
 const Content = () => {
   return (
