@@ -1,0 +1,30 @@
+.wrapper {
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  background-color: theme-color(grey4);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.close {
+  padding: 0 5px;
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+  }
+}
+
+.delimeter {
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
