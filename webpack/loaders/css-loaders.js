@@ -8,7 +8,7 @@ module.exports = [
     loader: 'css-loader', // translates CSS into CommonJS
     options: {
       modules: true,
-      camelCase: true,
+      camelCase: false,
       importLoaders: 2,
       localIdentName: '[name]__[local]___[hash:base64:5]'
     }
