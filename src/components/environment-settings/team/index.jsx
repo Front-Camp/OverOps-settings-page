@@ -53,7 +53,7 @@ class Team extends React.Component {
 
   removeEmail = emailToDelete => () =>
     this.setState({emails: this.state.emails.filter(email => email !== emailToDelete)})
-  
+
   tableConfig = {
     body: this.props.teamMembers.map(({name, email, role, status}, i) => [
       this.getCellObject(name, i),
@@ -79,10 +79,10 @@ class Team extends React.Component {
           <Button>Add</Button>
         </div>
         <Table config={this.tableConfig} />
-  
-        <div className={styles.access_control_container}>
+
+        <div className={styles['access-control-container']}>
           <Title>Access control</Title>
-          <div className={styles.input_container}>
+          <div className={styles['input-container']}>
             <span className={styles.label}>Allow access only to the following users:</span>
             <Input
               className={styles.input}
@@ -91,12 +91,12 @@ class Team extends React.Component {
               onChange={e => this.setState({email: e.target.value})}
               onKeyUp={this.addEmail}
             />
-            <div className={styles.tags_container}>
+            <div className={styles['tags-container']}>
               {this.state.emails.map(email =>
                 <Tag key={email} onClose={this.removeEmail(email)}>{email}</Tag>)}
             </div>
           </div>
-          <div className={styles.input_container}>
+          <div className={styles['input-container']}>
             <span className={styles.label}>Allow access only for the following IP{'\''}s:</span>
             <Input
               className={styles.input}
@@ -105,7 +105,7 @@ class Team extends React.Component {
               onChange={e => this.setState({ip: e.target.value})}
               onKeyUp={this.addIp}
             />
-            <div className={styles.tags_container}>
+            <div className={styles['tags-container']}>
               {this.state.ips.map(ip =>
                 <Tag key={ip} onClose={this.removeIP(ip)}>{ip}</Tag>)}
             </div>
