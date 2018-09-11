@@ -11,7 +11,7 @@
 
   .label {
     font-size: get-font-size(regular);
-    margin-right: 20px;
+    margin-right: 10px;
 
     svg {
       position: relative;
@@ -42,6 +42,30 @@
       cursor: pointer;
       color: theme-color(blue1);
     }
+  }
+
+  .tags-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      margin: 0 20px 10px 0;
+    }
+  }
+
+  .access-control-container {
+    margin-top: 40px;
+
+    .input {
+      height: 30px;
+      max-width: 250px;
+      margin-right: 10px;
+    }
+  }
+
+  .input-container {
+    margin-bottom: 40px;
   }
 
   .invite-to-team-container {
