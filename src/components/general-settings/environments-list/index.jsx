@@ -10,18 +10,14 @@ import Title from '../../controls/title';
 import SubTitle from '../../controls/subtitle';
 import {hideCharacters} from '../../table/utils';
 
-// TODO: move this to separate file
-const blue1 = '#51b2e9';
-const grey3 = '#778796';
-
 const InstallAndSettings = ({keyName}) => (
   <div className={styles['install-settings-container']}>
     <span className={styles.install}>
-      <IconDownload size={14} color={blue1} />Install
+      <IconDownload size={14} color="blue1" />Install
     </span>
     <span className={styles.delimeter}>|</span>
     <span className={styles.settings}>
-      <IconSetting size={14} color={blue1} />
+      <IconSetting size={14} color="blue1" />
       <Link to={`/settings/environment/${keyName}`}>Settings</Link>
     </span>
   </div>
@@ -46,7 +42,7 @@ const EnvironmentsList = ({services, toggleShowKeyId}) => {
         className={styles['key-id-cell']}>
         {item.show ? item.full_key : hideCharacters(item.full_key)}
         <span onClick={toggle()}>
-          <IconEye color={item.show ? grey3 : blue1} />
+          <IconEye color={item.show ? 'grey3' : 'blue1'} />
         </span>
       </span>
     };

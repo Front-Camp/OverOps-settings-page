@@ -45,11 +45,6 @@ Refactor test coverage reports generation
 
 ### CSS
 
-CSS class names convention is BEM
-
-[BEM](http://getbem.com/) - "Block Element Modifier" is a methodology that helps you to create 
-reusable components and code sharing in front-end development
-
 CSS import must be a last in the imports block:
 
 ```javascript

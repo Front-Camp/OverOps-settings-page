@@ -1,9 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import {config} from '../config';
+import styles from '../../../styles/utils/colors.scss';
 
-export const IconLogo = ({size, colors}) => {
+export const IconLogo = ({size = 24, colors = ['#3FA9F5', 'white1']}) => {
   const [first, second] = colors;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24">
@@ -16,7 +16,7 @@ export const IconLogo = ({size, colors}) => {
           13.7,6.4,13.2,6.6,12.4z`}
         />
         <path
-          fill={second}
+          fill={styles[second]}
           d={`M17.5,11.8c-1,6.6-2.6,8.4-6.8,8.4c-2.9,0-4.3-0.7-4.4-3.6H1.6c0.4,5.3,3.4,7.1,9,7.1
           c7.3,0,10.4-2.7,11.6-11.6c0.1-0.9,0.2-1.3,0.2-2.5h-4.7C17.8,10.2,17.6,11,17.5,11.8z`}
         />

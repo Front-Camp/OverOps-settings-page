@@ -8,6 +8,7 @@ module.exports = [
   {
     loader: 'eslint-loader',
     options: {
+      emitWarning: true
       // eslint options (if necessary)
     }
   }

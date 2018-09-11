@@ -9,7 +9,8 @@
     "test:updated": "jest -u",
     "lint": "eslint ./src --ext .jsx --ext .js",
     "stylelint": "stylelint './src/**/*.scss'",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook"
   },
   "dependencies": {
     "@material-ui/core": "^3.0.2",

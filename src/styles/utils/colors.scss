@@ -1,27 +1,74 @@
+// White
+$white1: #fff;
+  // Grey
+$grey1: #cbddf2;
+$grey2: #96a3b3;
+$grey3: #778796;
+$grey4: #5c656e;
+$grey5: #323a41;
+$grey6: #22272c;
+$grey7: #0b0b0b;
+  // Blue
+$blue1: #51b2e9;
+$blue2: #2eacd7;
+$blue3: #131f29;
+  // Red
+$red1: #ee6557;
+  // Green
+$green1: #8dc63f;
+  // Purple
+$purple1: #8863b8;
+  // Black
+$black1: #000;
+
 $colors: (
   // White
-  white1: #fff,
+  white1: $white1,
   // Grey
-  grey1: #cbddf2,
-  grey2: #96a3b3,
-  grey3: #778796,
-  grey4: #5c656e,
-  grey5: #323a41,
-  grey6: #22272c,
-  grey7: #0b0b0b,
+  grey1: $grey1,
+  grey2: $grey2,
+  grey3: $grey3,
+  grey4: $grey4,
+  grey5: $grey5,
+  grey6: $grey6,
+  grey7: $grey7,
   // Blue
-  blue1: #51b2e9,
-  blue2: #2eacd7,
-  blue3: #131f29,
+  blue1: $blue1,
+  blue2: $blue2,
+  blue3: $blue3,
   // Red
-  red1: #ee6557,
+  red1: $red1,
   // Green
-  green1: #8dc63f,
+  green1: $green1,
   // Purple
-  purple1: #8863b8,
+  purple1: $purple1,
   // Black
-  black1: #000
+  black1: $black1
 );
+
+:export {
+  white1: $white1;
+  // Grey
+  grey1: $grey1;
+  grey2: $grey2;
+  grey3: $grey3;
+  grey4: $grey4;
+  grey5: $grey5;
+  grey6: $grey6;
+  grey7: $grey7;
+  // Blue
+  blue1: $blue1;
+  blue2: $blue2;
+  blue3: $blue3;
+  // Red
+  red1: $red1;
+  // Green
+  green1: $green1;
+  // Purple
+  purple1: $purple1;
+  // Black
+  black1: $black1;
+}
 
 $fontSizes: (
   title: 24px,

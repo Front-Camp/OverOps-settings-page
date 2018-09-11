@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import {config} from '../config';
+import styles from '../../../styles/utils/colors.scss';
 
-export const IconQuestionCircleOutline = ({size, color}) => {
+export const IconQuestionCircleOutline = ({size = 24, color = 'black1'}) => {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24">
       <g>
         <path
-          fill={color}
+          fill={styles[color]}
           d={`M10.8,19.1h2.4v-2.4h-2.4V19.1
           M12,0.1C5.4,0.1,0.1,5.4,0.1,12S5.4,23.9,12,23.9S23.9,18.6,23.9,12S18.6,0.1,12,0.1
           M12,21.5c-5.2,0-9.5-4.3-9.5-9.5S6.8,2.5,12,2.5s9.5,4.3,9.5,9.5S17.2,21.5,12,21.5
@@ -19,11 +19,6 @@ export const IconQuestionCircleOutline = ({size, color}) => {
       </g>
     </svg>
   );
-};
-
-IconQuestionCircleOutline.defaultProps = {
-  size: config.size,
-  color: config.color
 };
 
 IconQuestionCircleOutline.propTypes = {
