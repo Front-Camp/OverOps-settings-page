@@ -8,12 +8,12 @@
     height: 100%;
     min-height: 100%;
     background: theme-color(grey5);
-    color: #fff;
+    color: theme-color(white1);
     font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
   }
 
   a {
-    color: #fff;
+    color: theme-color(white1);
   }
 
   .hidden {

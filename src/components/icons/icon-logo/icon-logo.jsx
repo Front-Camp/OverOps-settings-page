@@ -25,10 +25,6 @@ export const IconLogo = ({size = 24, colors = ['#3FA9F5', 'white1']}) => {
   );
 };
 
-IconLogo.defaultProps = {
-  size: config.size,
-  colors: ['#3FA9F5', '#fff']
-};
 
 IconLogo.propTypes = {
   size: PropTypes.number,

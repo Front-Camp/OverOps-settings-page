@@ -13,7 +13,7 @@ const AddEnvironment = () => {
 
       <span className={styles.label}>
         Generate a new license key: &nbsp;
-        <IconQuestionCircle colors={['#5c656e', '#fff']} size={14} />
+        <IconQuestionCircle colors={['grey4', 'white1']} size={14} />
       </span>
 
       <div className={styles['input-wrapper']}>

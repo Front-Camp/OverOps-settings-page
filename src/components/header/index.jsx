@@ -20,7 +20,7 @@ const Header = () => {
       </div>
       <div className={styles['right-cell']}>
         <div className={styles.info}>
-          <IconQuestionCircleOutline color={'#fff'} size={19} />
+          <IconQuestionCircleOutline color="white1" size={19} />
         </div>
       </div>
     </div>
