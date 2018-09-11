@@ -10,21 +10,27 @@ const stylesContext = classNames.bind(styles);
 
 class Navigation extends Component {
   state = {
-    activeSection: null,
     activeLink: null
   };
 
-  getNavigationItemClasses (section, link) {
-    const {activeSection, activeLink} = this.state;
+  static getDerivedStateFromProps(props) {
+    const [activeLink] = props.location.pathname.split('/').slice(-1);
+    return {
+      activeLink
+    };
+  }
+
+  getNavigationItemClasses (path) {
+    const {activeLink} = this.state;
 
     return stylesContext({
       'navigation-item': true,
-      'active': activeSection === section && activeLink === link
+      'active': activeLink === path
     });
   }
 
-  updateActiveLink(label, title) {
-    return () => this.setState({activeLink: label, activeSection: title});
+  updateActiveLink(path) {
+    return () => this.setState({activeLink: path});
   }
 
   render() {
@@ -40,10 +46,10 @@ class Navigation extends Component {
                 {section.links.map(link =>
                   <li
                     key={link.label}
-                    onClick={this.updateActiveLink(link.label, section.title)}>
+                    onClick={this.updateActiveLink(link.path)}>
 
                     <Link to={`${url}/${link.path}`}
-                          className={this.getNavigationItemClasses(section.title, link.label)}>
+                          className={this.getNavigationItemClasses(link.path)}>
                       <span className={styles['active-link-indicator']} />
                       <span>{link.label}</span>
                     </Link>
