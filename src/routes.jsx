@@ -13,7 +13,7 @@ export class Routes extends React.Component {
   render () {
     return (
       <Switch>
-        <Route path={Routes.root} component={Content} />
+        <Route path={`${Routes.root}/:level1?/:level2?/:level3?`} component={Content} />
         <Route render={Routes.makeRedirect()} />
       </Switch>
     );
