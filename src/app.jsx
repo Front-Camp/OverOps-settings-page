@@ -9,7 +9,7 @@ import Routes from './routes';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {services, teamMembers} from './store/__mocks__/store.mock';
 
-import './app.scss';
+import './styles/global.scss';
 
 // TODO: rethink it
 const theme = createMuiTheme({

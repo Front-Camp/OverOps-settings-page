@@ -1,3 +1,6 @@
+@import "utils/reset";
+@import "spinner";
+
 :global {
   html,
   body,
@@ -11,5 +14,9 @@
 
   a {
     color: theme-color(white1);
+  }
+
+  .hidden {
+    display: none;
   }
 }
