@@ -61,6 +61,12 @@ class Team extends React.Component {
     ])
   };
 
+  updateState (field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
+  }
+
   render () {
     return (
       <section className={styles.team}>
@@ -86,7 +92,7 @@ class Team extends React.Component {
               className={styles.input}
               placeholder="someone@company.com"
               value={this.state.email}
-              onChange={e => this.setState({email: e.target.value})}
+              onChange={this.updateState('email')}
               onKeyUp={this.addEmail}
             />
             <div className={styles['tags-container']}>
@@ -100,7 +106,7 @@ class Team extends React.Component {
               className={styles.input}
               placeholder="127.0.0.1"
               value={this.state.ip}
-              onChange={e => this.setState({ip: e.target.value})}
+              onChange={this.updateState('ip')}
               onKeyUp={this.addIp}
             />
             <div className={styles['tags-container']}>
