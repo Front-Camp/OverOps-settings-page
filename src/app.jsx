@@ -20,7 +20,6 @@ const theme = createMuiTheme({
 });
 
 const store = configureStore({
-  counter: 0,
   services,
   teamMembers
 });

@@ -39,12 +39,13 @@ const getConfig = arr => {
 
 const EnvironmentsList = ({services, toggleShowKeyId}) => {
   const mockedServices = services.map(item => {
+    const toggle = () => () => toggleShowKeyId(item.name);
     const keyID = {
       value: <span
         key="key_id"
         className={styles['key-id-cell']}>
         {item.show ? item.full_key : hideCharacters(item.full_key)}
-        <span onClick={() => toggleShowKeyId(item.name)}>
+        <span onClick={toggle()}>
           <IconEye color={item.show ? grey3 : blue1} />
         </span>
       </span>

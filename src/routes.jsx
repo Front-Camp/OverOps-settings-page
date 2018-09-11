@@ -6,11 +6,15 @@ import Content from './components/content/index';
 export class Routes extends React.Component {
   static root = '/settings';
 
+  static makeRedirect () {
+    return () => <Redirect from={`${Routes.root}`} to={Routes.root} />;
+  }
+
   render () {
     return (
       <Switch>
         <Route path={Routes.root} component={Content} />
-        <Route render={() => <Redirect from={`${Routes.root}`} to={Routes.root} />} />
+        <Route render={Routes.makeRedirect()} />
       </Switch>
     );
   }
