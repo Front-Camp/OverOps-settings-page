@@ -44,31 +44,6 @@
     }
   }
 
-  .tags-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-
-    & > * {
-      margin: 0 20px 10px 0;
-    }
-  }
-
-  .access-control-container {
-    margin-top: 40px;
-
-    .input {
-      height: 30px;
-      max-width: 250px;
-      margin-right: 10px;
-      font-size: 14px;
-    }
-  }
-
-  .input-container {
-    margin-bottom: 40px;
-  }
-
   .invite-to-team-container {
     margin-bottom: 40px;
 
