@@ -1,20 +1,20 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import {config} from '../config';
+import styles from '../../../styles/utils/colors.scss';
 
-export const IconQuestionCircle = ({size, colors}) => {
+export const IconQuestionCircle = ({size = 24, colors = ['black1', 'white1']}) => {
   const [first, second] = colors;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24">
       <g>
         <path
-          fill={first}
+          fill={styles[first]}
           d={`M12,0.2C5.5,0.2,0.2,5.5,0.2,12S5.5,23.8,12,23.8S23.8,18.5,23.8,
           12C23.8,5.4,18.5,0.2,12,0.2z`}
         />
         <path
-          fill={second}
+          fill={styles[second]}
           d={`M15.6,11.1l-1.1,1.1c-0.9,0.9-1.4,1.6-1.4,3.4h-2.4V15c0-1.3,
           0.5-2.5,1.4-3.4l1.5-1.5c0.4-0.4,0.7-1,0.7-1.7
           c0-1.3-1.1-2.4-2.4-2.4S9.5,7.1,9.5,8.4H7.3c0-2.6,2.1-4.7,
@@ -24,11 +24,6 @@ export const IconQuestionCircle = ({size, colors}) => {
       </g>
     </svg>
   );
-};
-
-IconQuestionCircle.defaultProps = {
-  size: config.size,
-  colors: [config.colors[0], config.colors[1]]
 };
 
 IconQuestionCircle.propTypes = {

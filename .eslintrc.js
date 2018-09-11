@@ -47,7 +47,7 @@ module.exports = {
         }
       ],
       "linebreak-style": [
-          "warn",
+          0,
           "unix"
       ],
       "quotes": [
@@ -61,5 +61,8 @@ module.exports = {
       /* React rules */
       "react/prop-types": 1,
       "react/jsx-indent-props": [1, 'first'],
+      "react/jsx-no-bind": [2, {
+        "ignoreRefs": true
+      }]
   }
 };

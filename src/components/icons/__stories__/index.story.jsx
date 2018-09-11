@@ -6,7 +6,8 @@ import {IconClose} from '../icon-close';
 import {IconDownload} from '../icon-download';
 import {IconEdit} from '../icon-edit';
 import {IconEye} from '../icon-eye';
-import {IconQuestion} from '../icon-question';
+import {IconQuestionCircleOutline} from '../icon-question-circle-outline';
+import {IconQuestionCircle} from '../icon-question-cirlce';
 import {IconSetting} from '../icon-setting';
 
 storiesOf('Icons', module)
@@ -18,7 +19,8 @@ storiesOf('Icons', module)
       <IconDownload/>
       <IconEdit/>
       <IconEye/>
-      <IconQuestion/>
+      <IconQuestionCircleOutline/>
+      <IconQuestionCircle/>
       <IconSetting/>
     </div>
   ));

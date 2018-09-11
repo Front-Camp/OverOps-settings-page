@@ -1,11 +1,9 @@
 import {combineReducers} from 'redux';
 import {createReducers} from './createReducers';
-import counter from './counter';
 import services from './services';
 import teamMembers from './team-members';
 
 const reducers = {
-  counter,
   services,
   teamMembers
 };

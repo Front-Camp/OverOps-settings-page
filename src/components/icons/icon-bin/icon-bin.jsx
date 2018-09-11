@@ -1,11 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import {config} from '../config';
+import styles from '../../../styles/utils/colors.scss';
 
-export const IconBin = ({size, color}) => (
+export const IconBin = ({size = 24, color = 'black1'}) => (
   <svg width={size} height={size} viewBox="0 0 24 24">
-    <g fill={color}>
+    <g fill={styles[color]}>
       <path
         d={`M19.1,3.2h-3.3V1.7c0-1.2-0.4-1.5-1.5-1.5H9.7c-1,0-1.5,0.5-1.5,
         1.5v1.5H4.9c-0.7,0-1.2,0.5-1.2,1.1s0.5,1.1,1.2,1.1h14.2
@@ -20,11 +20,6 @@ export const IconBin = ({size, color}) => (
     </g>
   </svg>
 );
-
-IconBin.defaultProps = {
-  size: config.size,
-  color: config.color
-};
 
 IconBin.propTypes = {
   size: PropTypes.number,

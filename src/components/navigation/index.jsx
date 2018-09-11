@@ -23,6 +23,10 @@ class Navigation extends Component {
     });
   }
 
+  updateActiveLink(label, title) {
+    return () => this.setState({activeLink: label, activeSection: title});
+  }
+
   render() {
     const {match: {url}} = this.props;
 
@@ -36,8 +40,7 @@ class Navigation extends Component {
                 {section.links.map(link =>
                   <li
                     key={link.label}
-                    onClick={() =>
-                      this.setState({activeLink: link.label, activeSection: section.title})}>
+                    onClick={this.updateActiveLink(link.label, section.title)}>
 
                     <Link to={`${url}/${link.path}`}
                           className={this.getNavigationItemClasses(section.title, link.label)}>

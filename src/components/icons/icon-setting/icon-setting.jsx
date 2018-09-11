@@ -1,11 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import {config} from '../config';
+import styles from '../../../styles/utils/colors.scss';
 
-export const IconSetting = ({size, color}) => (
+export const IconSetting = ({size = 24, color = 'black1'}) => (
   <svg width={size} height={size} viewBox="0 0 24 24">
-    <g fill={color}>
+    <g fill={styles[color]}>
       <path
         d={`M22.7,9.5L21,9.2c-0.2-0.6-0.4-1.1-0.7-1.6l1-1.4c0.4-0.6,
         0.4-1.4-0.2-1.9l-1.5-1.5c-0.3-0.3-0.6-0.4-1-0.4
@@ -29,11 +29,6 @@ export const IconSetting = ({size, color}) => (
     </g>
   </svg>
 );
-
-IconSetting.defaultProps = {
-  size: config.size,
-  color: config.color
-};
 
 IconSetting.propTypes = {
   size: PropTypes.number,

@@ -1,24 +1,23 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import connect from 'react-redux/es/connect/connect';
+import {toggleShowKeyId} from '../../../actions/services';
 import styles from './environments-list.scss';
 import Table from '../../table';
 import AddEnvironment from '../add-environment';
-import {IconDownload, IconSetting} from '../../icons';
-import connect from 'react-redux/es/connect/connect';
-import {Link} from 'react-router-dom';
+import {IconDownload, IconSetting, IconEye} from '../../icons';
 import Title from '../../controls/title';
 import SubTitle from '../../controls/subtitle';
-
-// TODO: move this to separate file
-const blue1 = '#51b2e9';
+import {hideCharacters} from '../../table/utils';
 
 const InstallAndSettings = ({keyName}) => (
   <div className={styles['install-settings-container']}>
     <span className={styles.install}>
-      <IconDownload size={14} color={blue1} />Install
+      <IconDownload size={14} color="blue1" />Install
     </span>
     <span className={styles.delimeter}>|</span>
     <span className={styles.settings}>
-      <IconSetting size={14} color={blue1} />
+      <IconSetting size={14} color="blue1" />
       <Link to={`/settings/environment/${keyName}`}>Settings</Link>
     </span>
   </div>
@@ -34,9 +33,20 @@ const getConfig = arr => {
   };
 };
 
-const EnvironmentsList = ({services}) => {
+const EnvironmentsList = ({services, toggleShowKeyId}) => {
   const mockedServices = services.map(item => {
-    return [item.name, item.full_key, 'Owner'];
+    const toggle = () => () => toggleShowKeyId(item.name);
+    const keyID = {
+      value: <span
+        key="key_id"
+        className={styles['key-id-cell']}>
+        {item.show ? item.full_key : hideCharacters(item.full_key)}
+        <span onClick={toggle()}>
+          <IconEye color={item.show ? 'grey3' : 'blue1'} />
+        </span>
+      </span>
+    };
+    return [item.name, keyID, 'Owner'];
   });
   const config = getConfig(mockedServices);
 
@@ -61,4 +71,8 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, null)(EnvironmentsList);
+const mapDispatchToProps = dispatch => ({
+  toggleShowKeyId: keyId => dispatch(toggleShowKeyId(keyId)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EnvironmentsList);

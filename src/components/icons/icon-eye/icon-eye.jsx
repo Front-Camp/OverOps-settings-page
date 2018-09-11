@@ -1,11 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import {config} from '../config';
+import styles from '../../../styles/utils/colors.scss';
 
-export const IconEye = ({size, color}) => (
+export const IconEye = ({size = 24, color = 'black1'}) => (
   <svg width={size} height={size} viewBox="0 0 24 24">
-    <g fill={color}>
+    <g fill={styles[color]}>
       <path
         d={`M12,8.8c1.8,0,3.2,1.5,3.2,3.2s-1.5,3.2-3.2,3.2S8.8,13.8,8.8,12S10.2,8.8,12,8.8
         M12,3.9c5.4,0,10,3.4,11.9,8.1
@@ -16,11 +16,6 @@ export const IconEye = ({size, color}) => (
     </g>
   </svg>
 );
-
-IconEye.defaultProps = {
-  size: config.size,
-  color: config.color
-};
 
 IconEye.propTypes = {
   size: PropTypes.number,

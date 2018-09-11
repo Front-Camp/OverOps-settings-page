@@ -4,22 +4,20 @@ import {connect} from 'react-redux';
 import Input from '../../controls/input';
 import Button from '../../controls/button';
 import Table from '../../table';
-import styles from './team.scss';
 import {IconEdit, IconBin} from '../../icons';
 import Title from '../../controls/title';
 import SubTitle from '../../controls/subtitle';
 
-const blue1 = '#51b2e9';
-const grey2 = '#96a3b3';
+import styles from './team.scss';
 
 const EditAndDelete = () => (
   <div className={styles['edit-delete-container']}>
     <span className={styles.edit}>
-      <IconEdit size={14} color={blue1} />
+      <IconEdit size={14} color="blue1" />
     </span>
     <span className={styles.delimeter}>|</span>
     <span className={styles.delete}>
-      <IconBin size={14} color={blue1} />
+      <IconBin size={14} color="blue1" />
     </span>
   </div>
 );
@@ -32,7 +30,7 @@ const Team = ({teamMembers}) => {
     body: teamMembers.map(({name, email, role, status}, i) => [
       getCellObject(name, i),
       getCellObject(email, i),
-      {...getCellObject(role || status, i), style: !role ? {color: grey2} : null},
+      {...getCellObject(role || status, i), style: !role ? {color: '#96a3b3'} : null},
       getCellObject(<EditAndDelete />, i)
     ])
   };

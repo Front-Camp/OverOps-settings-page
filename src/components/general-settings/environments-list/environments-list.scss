@@ -21,6 +21,15 @@
     }
   }
 
+  .key-id-cell {
+    svg {
+      position: relative;
+      cursor: pointer;
+      top: 7px;
+      padding: 0 5px;
+    }
+  }
+
   .install-settings-container {
     svg {
       position: relative;
