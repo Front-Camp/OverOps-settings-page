@@ -2,7 +2,7 @@ import React from 'react';
 import Spinner from './index';
 import {shallow} from 'enzyme/build';
 
-describe('Spinner', () => {
+describe('Loader', () => {
   it('Component should be rendered correctly', () => {
     const component = shallow(<Spinner />);
 

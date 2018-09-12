@@ -1,14 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import connect from 'react-redux/es/connect/connect';
-import {toggleShowKeyId} from '../../../actions/services';
-import styles from './environments-list.scss';
 import Table from '../../table';
 import AddEnvironment from '../add-environment';
 import {IconDownload, IconSetting, IconEye} from '../../icons';
 import Title from '../../controls/title';
 import SubTitle from '../../controls/subtitle';
 import {hideCharacters} from '../../table/utils';
+import {toggleShowKeyId, fetchAllServices} from '../../../actions/services';
+
+import styles from './environments-list.scss';
 
 const InstallAndSettings = ({keyName}) => (
   <div className={styles['install-settings-container']}>
@@ -33,22 +34,24 @@ const getConfig = arr => {
   };
 };
 
-const EnvironmentsList = ({services, toggleShowKeyId}) => {
-  const mockedServices = services.map(item => {
-    const toggle = () => () => toggleShowKeyId(item.name);
-    const keyID = {
-      value: <span
-        key="key_id"
-        className={styles['key-id-cell']}>
+const getMockedServices = (services, toggleShowKeyId) => services.map(item => {
+  const toggle = () => () => toggleShowKeyId(item.name);
+  const keyID = {
+    value: <span
+      key="key_id"
+      className={styles['key-id-cell']}>
         {item.show ? item.full_key : hideCharacters(item.full_key)}
-        <span onClick={toggle()}>
+      <span onClick={toggle()}>
           <IconEye color={item.show ? 'grey3' : 'blue1'} />
         </span>
       </span>
-    };
-    return [item.name, keyID, 'Owner'];
-  });
-  const config = getConfig(mockedServices);
+  };
+
+  return [item.name, keyID, 'Owner'];
+});
+
+const EnvironmentsList = ({services, toggleShowKeyId, fetchAllServices}) => {
+  const config = getConfig(getMockedServices(services, toggleShowKeyId));
 
   return (
     <section className={styles['environments-list']}>
@@ -73,6 +76,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   toggleShowKeyId: keyId => dispatch(toggleShowKeyId(keyId)),
+  fetchAllServices: () => dispatch(fetchAllServices())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EnvironmentsList);

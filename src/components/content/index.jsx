@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../header';
 import Breadcrumbs from '../breadcrumbs';
 import ContentRoutes from './routes';
-import Spinner from '../spinner';
+import Loader from '../loader';
 
 import styles from './content.scss';
 
@@ -14,7 +14,7 @@ const Content = () => {
         <Breadcrumbs />
         <ContentRoutes/>
       </div>
-      <Spinner/>
+      <Loader/>
     </main>
   );
 };
