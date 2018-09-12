@@ -5,10 +5,10 @@ import {toggleShowKeyId} from '../../../actions/services';
 import styles from './environments-list.scss';
 import Table from '../../table';
 import AddEnvironment from '../add-environment';
-import {IconDownload, IconSetting, IconEye} from '../../icons';
+import {IconDownload, IconSetting} from '../../icons';
 import Title from '../../controls/title';
 import SubTitle from '../../controls/subtitle';
-import {hideCharacters} from '../../table/utils';
+import {KeyIdCell} from './key-id-cell';
 
 const InstallAndSettings = ({keyName}) => (
   <div className={styles['install-settings-container']}>
@@ -25,6 +25,7 @@ const InstallAndSettings = ({keyName}) => (
 
 const getConfig = arr => {
   return {
+    columnsWidth: ['15%', '50%', '15%', '20%'],
     headings: ['Key Name', 'Key ID', 'Role', {value: '', noBottomBorder: true}],
     body: arr.map(row => {
       const [keyName] = row;
@@ -35,16 +36,9 @@ const getConfig = arr => {
 
 const EnvironmentsList = ({services, toggleShowKeyId}) => {
   const mockedServices = services.map(item => {
-    const toggle = () => () => toggleShowKeyId(item.name);
+    const toggle = () => toggleShowKeyId(item.name);
     const keyID = {
-      value: <span
-        key="key_id"
-        className={styles['key-id-cell']}>
-        {item.show ? item.full_key : hideCharacters(item.full_key)}
-        <span onClick={toggle()}>
-          <IconEye color={item.show ? 'grey3' : 'blue1'} />
-        </span>
-      </span>
+      value: <KeyIdCell item={item} toggle={toggle}/>,
     };
     return [item.name, keyID, 'Owner'];
   });
