@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Spinner Component should be rendered correctly 1`] = `
-<div
-  className="hidden"
-/>
-`;
