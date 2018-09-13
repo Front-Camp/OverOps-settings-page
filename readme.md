@@ -1,4 +1,4 @@
-# WARNING THIS PROJECT WAS ARHIVED!!!
+# WARNING: THIS PROJECT WAS ARHIVED!!!
 
 # OverOps-settings-page
 
