@@ -14,9 +14,13 @@ const getCssClasses = cell =>
 
 const Table = ({config: {headings, body, columnsWidth}}) => {
   return (
-    <table className={styles.table} style={{width: '100%', tableLayout: columnsWidth ? 'fixed' : 'auto'}}>
+    <table
+      className={styles.table}
+      style={{width: '100%', tableLayout: columnsWidth ? 'fixed' : 'auto'}}>
       {columnsWidth &&
-        columnsWidth.map(width => <col span="1" style={{width}}/>)
+        <colgroup>
+          {columnsWidth.map((width, i) => <col key={i} span="1" style={{width}}/>)}
+        </colgroup>
       }
       {headings && <thead>
         <tr>{headings.map((cell, i) =>

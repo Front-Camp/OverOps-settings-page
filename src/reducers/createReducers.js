@@ -6,7 +6,7 @@ export const createReducers = reducerObj => {
   }, {});
 };
 
-const createReducer = handlers => {
+export const createReducer = handlers => {
   return (state = null, action) => {
     if (handlers[action.type]) {
       return handlers[action.type](state, action);

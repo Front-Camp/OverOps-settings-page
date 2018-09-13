@@ -14,9 +14,10 @@ export const KeyIdCell = ({item, toggle}) => (
         overflowX: 'auto',
         padding: '5px'
       }}>
-      {item.show ? item.full_key : hideCharacters(item.full_key)}</span>
-      <span onClick={toggle} style={{position: 'relative', top: '-5px', marginLeft: '10px'}}>
-        <IconEye color={item.show ? 'grey3' : 'blue1'} />
-      </span>
+      {item.show ? item.full_key : hideCharacters(item.full_key)}
     </span>
+    <span onClick={toggle} style={{position: 'relative', top: '-5px', marginLeft: '10px'}}>
+      <IconEye color={item.show ? 'grey3' : 'blue1'} />
+    </span>
+  </span>
 );

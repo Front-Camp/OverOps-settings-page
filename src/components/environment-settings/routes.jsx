@@ -43,7 +43,7 @@ export class EnvironmentRoutes extends React.Component {
     return (
       <Switch>
         <Route path={`${path}/:path`} component={EnvironmentNestedRoutes} />
-        <Redirect from={path} to={`/environments`} />
+        <Redirect from={path} to={'/environments'} />
       </Switch>
     );
   }

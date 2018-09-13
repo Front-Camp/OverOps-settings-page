@@ -20,7 +20,7 @@ const BreadcrumbsItem = ({ match }) => {
         }
       </span>
       <Route path={`${match.url}/:path`} component={BreadcrumbsItem} />
-  </span>
+    </span>
   );
 };
 
