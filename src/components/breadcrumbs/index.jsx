@@ -1,27 +1,34 @@
 import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import {Link, withRouter, Route} from 'react-router-dom';
 import styles from './breadcrumbs.scss';
 
-const Breadcrumbs = ({match}) => {
-  const items = match.url.split('/').filter(item => item);
-
+const BreadcrumbLink = ({match}) => {
   return (
-    <div className={styles.breadcrumbs}>
-      {
-        items.map((item, index) => {
-          return (
-            <span className={styles.item} key={index}>
-              <Link to="/settings">{item}</Link>
-              {
-                index < items.length - 1
-                  ? <span>&nbsp; &gt; &nbsp;</span>
-                  : null
-              }
-            </span>
-          );
-        })
-      }
-    </div>
+    !match.isExact
+      ? <Link to={match.url || ''}>{match.params.path}</Link>
+      : <span className={styles['active-link']}>{match.params.path}</span>
+  );
+};
+
+const BreadcrumbsItem = ({ match }) => {
+  return (
+    <span>
+      <span className={styles.item}>
+        <BreadcrumbLink match={match} />
+        {
+          !match.isExact ? <span>&nbsp; &gt; &nbsp;</span> : null
+        }
+      </span>
+      <Route path={`${match.url}/:path`} component={BreadcrumbsItem} />
+    </span>
+  );
+};
+
+const Breadcrumbs = () => {
+  return (
+    <span className={styles.breadcrumbs}>
+      <Route path='/:path' component={BreadcrumbsItem} />
+    </span>
   );
 };
 

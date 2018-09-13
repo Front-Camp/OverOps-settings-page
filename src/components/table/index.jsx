@@ -12,9 +12,16 @@ const getCssClasses = cell =>
     ? `${styles.cell} ${styles['no-bottom-border']}`
     : styles.cell;
 
-const Table = ({config: {headings, body}}) => {
+const Table = ({config: {headings, body, columnsWidth}}) => {
   return (
-    <table className={styles.table}>
+    <table
+      className={styles.table}
+      style={{width: '100%', tableLayout: columnsWidth ? 'fixed' : 'auto'}}>
+      {columnsWidth &&
+        <colgroup>
+          {columnsWidth.map((width, i) => <col key={i} span="1" style={{width}}/>)}
+        </colgroup>
+      }
       {headings && <thead>
         <tr>{headings.map((cell, i) =>
           <th
@@ -54,7 +61,8 @@ const cellPropsType = PropTypes.oneOfType([
 Table.propTypes = {
   config: PropTypes.shape({
     headings: PropTypes.arrayOf(cellPropsType),
-    body: PropTypes.arrayOf(PropTypes.arrayOf(cellPropsType))
+    body: PropTypes.arrayOf(PropTypes.arrayOf(cellPropsType)),
+    columnsWidth: PropTypes.arrayOf(PropTypes.string)
   })
 };
 

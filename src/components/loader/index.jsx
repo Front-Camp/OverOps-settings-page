@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const Loader = ({ loader }) => {
-  console.error('loader', loader);
   return (
     <div className={ loader ? 'loader-wrapper' : 'hidden'}>
       <div className={ 'loader' } />

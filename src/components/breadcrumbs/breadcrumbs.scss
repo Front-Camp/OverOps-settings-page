@@ -8,9 +8,9 @@
 
   .item {
     text-transform: capitalize;
+  }
 
-    &:last-child {
-      color: theme-color('grey2');
-    }
+  .active-link {
+    color: theme-color('grey2');
   }
 }

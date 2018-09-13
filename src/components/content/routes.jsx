@@ -9,9 +9,8 @@ export class ContentRoutes extends React.Component {
 
     return (
       <Switch>
-        <Route exact path={`${path}/environment`} component={EnvironmentSettings} />
-        <Route path={`${path}/environment/:envName`} component={EnvironmentSettings} />
-        <Route path={`${path}`} component={GeneralSettings} />
+        <Route path={`${path}/environment/:envName?`} component={EnvironmentSettings} />
+        <Route path={path} component={GeneralSettings} />
       </Switch>
     );
   }

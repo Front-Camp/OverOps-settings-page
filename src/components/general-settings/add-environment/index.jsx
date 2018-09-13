@@ -21,17 +21,17 @@ class AddEnvironment extends React.Component {
 
   updateInput () {
     return e => {
-      this.setState({input: e.target.value})
-    }
+      this.setState({input: e.target.value});
+    };
   }
 
   createService () {
     return () => {
       this.props.fetchCreateService(this.state.input)
         .then(() => {
-          this.setState({input: ''})
+          this.setState({input: ''});
         });
-    }
+    };
   }
 
   render () {
@@ -45,7 +45,11 @@ class AddEnvironment extends React.Component {
         </span>
 
         <div className={styles['input-wrapper']}>
-          <Input value={this.state.input} onChange={this.updateInput()} type="text" placeholder="Enter an environment name" />
+          <Input
+            type="text"
+            placeholder="Enter an environment name"
+            value={this.state.input}
+            onChange={this.updateInput()}/>
         </div>
 
         <div className={styles['btn-wrapper']}>

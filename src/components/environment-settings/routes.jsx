@@ -13,26 +13,37 @@ import Dashboard from './dashboard';
 import FilterCode from './filter-code';
 import EmailServer from './email-server';
 
+const EnvironmentNestedRoutes = ({match}) => {
+  const {path} = match;
+
+  return (
+    <Switch>
+      <Route path={`${path}/team`} component={Team} />
+      <Route path={`${path}/team`} component={Team} />
+      <Route path={`${path}/alerts`} component={Alerts} />
+      <Route path={`${path}/dashboard`} component={Dashboard} />
+      <Route path={`${path}/filter-code`} component={FilterCode} />
+      <Route path={`${path}/storage`} component={Storage} />
+      <Route path={`${path}/email-server`}  component={EmailServer} />
+      <Route path={`${path}/data-redaction`} component={DataRedaction} />
+      <Route path={`${path}/ldap`} component={Ldap} />
+      <Route path={`${path}/saml`} component={Saml} />
+      <Route path={`${path}/public-metrics`} component={PublicMetrics} />
+      <Route path={`${path}/jira`} component={Jira} />
+      <Route path={`${path}/git`} component={Git} />
+      <Redirect from={path} to={`${path}/team`} />
+    </Switch>
+  );
+};
+
 export class EnvironmentRoutes extends React.Component {
   render () {
     const {path} = this.props.match;
 
     return (
       <Switch>
-        <Route path={`${path}/team`} component={Team} />
-        <Route path={`${path}/team`} component={Team} />
-        <Route path={`${path}/alerts`} component={Alerts} />
-        <Route path={`${path}/dashboard`} component={Dashboard} />
-        <Route path={`${path}/filter-code`} component={FilterCode} />
-        <Route path={`${path}/storage`} component={Storage} />
-        <Route path={`${path}/email-server`}  component={EmailServer} />
-        <Route path={`${path}/data-redaction`} component={DataRedaction} />
-        <Route path={`${path}/ldap`} component={Ldap} />
-        <Route path={`${path}/saml`} component={Saml} />
-        <Route path={`${path}/public-metrics`} component={PublicMetrics} />
-        <Route path={`${path}/jira`} component={Jira} />
-        <Route path={`${path}/git`} component={Git} />
-        <Redirect from={path} to={`${path}/team`} />
+        <Route path={`${path}/:path`} component={EnvironmentNestedRoutes} />
+        <Redirect from={path} to={'/environments'} />
       </Switch>
     );
   }

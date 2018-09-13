@@ -7,13 +7,13 @@ export class Routes extends React.Component {
   static root = '/settings';
 
   static makeRedirect () {
-    return () => <Redirect from={`${Routes.root}`} to={Routes.root} />;
+    return () => <Redirect to={Routes.root} />;
   }
 
   render () {
     return (
       <Switch>
-        <Route path={`${Routes.root}/:level1?/:level2?/:level3?`} component={Content} />
+        <Route path={`${Routes.root}`} component={Content} />
         <Route render={Routes.makeRedirect()} />
       </Switch>
     );
