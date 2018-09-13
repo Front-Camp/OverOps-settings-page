@@ -19,12 +19,7 @@ export const fetchServicesLists = () => {
 
 
 export const createService = data => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (Math.random() >= 0.5) {
-        return resolve({data});
-      }
-      return reject({error: 'Something went wrong'});
-    }, 1000);
+  return new Promise(resolve => {
+    setTimeout(() => resolve({data}), 1000);
   });
 };

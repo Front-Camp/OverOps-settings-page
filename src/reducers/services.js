@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   TOGGLE_SHOW_KEY_ID,
   FETCH_ALL_SERVICES_REQUEST,
@@ -50,8 +51,15 @@ export default {
     // loading: false,
     // error: null,
     // data
-    console.error('!!! success', data, state);
-    return state;
+    // TODO: temporary solution for demo purpose
+    const obj = {
+      id: 'S36891',
+      "full_key": "S36891#WZ6T/kAT6rnmwluF#DeTYwWEWdZYWeQZPkJGi1NWbetAOsg3ZiXVngulqCNE=#f2f2",
+      "show": false,
+      name: data.data
+    };
+
+    return [obj, ...state];
   },
   [FETCH_CREATE_SERVICE_FAILURE]: (state, {error}) => {
     // loading: false,

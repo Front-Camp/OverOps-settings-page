@@ -40,9 +40,9 @@ const getConfig = arr => {
 };
 
 const getMockedServices = (services, toggleShowKeyId) => services.map(item => {
-  const toggle = () => toggleShowKeyId(item.name);
+  const toggle = () => () => toggleShowKeyId(item.name);
   const keyID = {
-    value: <KeyIdCell item={item} toggle={toggle}/>,
+    value: <KeyIdCell item={item} toggle={toggle()}/>,
   };
 
   return [item.name, keyID, 'Owner'];
